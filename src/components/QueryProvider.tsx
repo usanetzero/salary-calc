@@ -1,6 +1,10 @@
 "use client";
 
-import { QueryClient, QueryClientProvider, QueryFunction } from "@tanstack/react-query";
+import {
+  QueryClient,
+  QueryClientProvider,
+  QueryFunction,
+} from "@tanstack/react-query";
 import { useState } from "react";
 
 async function throwIfResNotOk(res: Response) {
@@ -34,12 +38,10 @@ export function QueryProvider({ children }: { children: React.ReactNode }) {
             retry: false,
           },
         },
-      })
+      }),
   );
 
   return (
-    <QueryClientProvider client={queryClient}>
-      {children}
-    </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 }

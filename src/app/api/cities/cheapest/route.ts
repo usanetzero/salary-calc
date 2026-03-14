@@ -9,7 +9,8 @@ export async function GET(request: NextRequest) {
     const cities = await getCheapestCities(state, limit);
     return NextResponse.json(cities);
   } catch (e: unknown) {
-    const message = e instanceof Error ? e.message : "Failed to fetch cheapest cities";
+    const message =
+      e instanceof Error ? e.message : "Failed to fetch cheapest cities";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }

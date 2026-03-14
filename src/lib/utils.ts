@@ -5,7 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatCurrency(value: number, opts?: { compact?: boolean }): string {
+export function formatCurrency(
+  value: number,
+  opts?: { compact?: boolean },
+): string {
   if (opts?.compact) {
     if (value >= 1_000_000) return `$${(value / 1_000_000).toFixed(1)}M`;
     if (value >= 1_000) return `$${(value / 1_000).toFixed(0)}K`;
@@ -45,25 +48,69 @@ export function costIndexColor(index: number): string {
 }
 
 export function costIndexBg(index: number): string {
-  if (index < 85) return "bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300";
-  if (index < 100) return "bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300";
-  if (index < 115) return "bg-yellow-100 dark:bg-yellow-950 text-yellow-800 dark:text-yellow-300";
-  if (index < 140) return "bg-orange-100 dark:bg-orange-950 text-orange-800 dark:text-orange-300";
+  if (index < 85)
+    return "bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300";
+  if (index < 100)
+    return "bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300";
+  if (index < 115)
+    return "bg-yellow-100 dark:bg-yellow-950 text-yellow-800 dark:text-yellow-300";
+  if (index < 140)
+    return "bg-orange-100 dark:bg-orange-950 text-orange-800 dark:text-orange-300";
   return "bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-300";
 }
 
 export function getStateFullName(code: string): string {
   const states: Record<string, string> = {
-    AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
-    CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia",
-    HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa",
-    KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland",
-    MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi", MO: "Missouri",
-    MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
-    NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio",
-    OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina",
-    SD: "South Dakota", TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont",
-    VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
+    AL: "Alabama",
+    AK: "Alaska",
+    AZ: "Arizona",
+    AR: "Arkansas",
+    CA: "California",
+    CO: "Colorado",
+    CT: "Connecticut",
+    DE: "Delaware",
+    FL: "Florida",
+    GA: "Georgia",
+    HI: "Hawaii",
+    ID: "Idaho",
+    IL: "Illinois",
+    IN: "Indiana",
+    IA: "Iowa",
+    KS: "Kansas",
+    KY: "Kentucky",
+    LA: "Louisiana",
+    ME: "Maine",
+    MD: "Maryland",
+    MA: "Massachusetts",
+    MI: "Michigan",
+    MN: "Minnesota",
+    MS: "Mississippi",
+    MO: "Missouri",
+    MT: "Montana",
+    NE: "Nebraska",
+    NV: "Nevada",
+    NH: "New Hampshire",
+    NJ: "New Jersey",
+    NM: "New Mexico",
+    NY: "New York",
+    NC: "North Carolina",
+    ND: "North Dakota",
+    OH: "Ohio",
+    OK: "Oklahoma",
+    OR: "Oregon",
+    PA: "Pennsylvania",
+    RI: "Rhode Island",
+    SC: "South Carolina",
+    SD: "South Dakota",
+    TN: "Tennessee",
+    TX: "Texas",
+    UT: "Utah",
+    VT: "Vermont",
+    VA: "Virginia",
+    WA: "Washington",
+    WV: "West Virginia",
+    WI: "Wisconsin",
+    WY: "Wyoming",
     DC: "Washington DC",
   };
   return states[code] || code;

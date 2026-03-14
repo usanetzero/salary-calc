@@ -26,7 +26,7 @@ function docToCity(doc: Record<string, unknown>): City {
 async function ensureConnection(): Promise<void> {
   if (!process.env.MONGODB_URI) {
     throw new Error(
-      "MONGODB_URI environment variable is not configured. All data must come from the database — no static/fallback data is used. Please set MONGODB_URI in your .env.local file."
+      "MONGODB_URI environment variable is not configured. All data must come from the database — no static/fallback data is used. Please set MONGODB_URI in your .env.local file.",
     );
   }
   if (!isMongoConnected()) {
@@ -48,20 +48,31 @@ export async function getCityBySlug(slug: string): Promise<City | undefined> {
 
 export async function getCitiesByState(stateCode: string): Promise<City[]> {
   await ensureConnection();
-  const docs = await CityModel.find({ stateCode: stateCode.toUpperCase() }).lean();
+  const docs = await CityModel.find({
+    stateCode: stateCode.toUpperCase(),
+  }).lean();
   return docs.map(docToCity);
 }
 
 export async function getTopCities(limit: number = 12): Promise<City[]> {
   await ensureConnection();
-  const docs = await CityModel.find({}).sort({ population: -1 }).limit(limit).lean();
+  const docs = await CityModel.find({})
+    .sort({ population: -1 })
+    .limit(limit)
+    .lean();
   return docs.map(docToCity);
 }
 
-export async function getCheapestCities(stateCode?: string, limit: number = 20): Promise<City[]> {
+export async function getCheapestCities(
+  stateCode?: string,
+  limit: number = 20,
+): Promise<City[]> {
   await ensureConnection();
   const filter = stateCode ? { stateCode: stateCode.toUpperCase() } : {};
-  const docs = await CityModel.find(filter).sort({ costIndex: 1 }).limit(limit).lean();
+  const docs = await CityModel.find(filter)
+    .sort({ costIndex: 1 })
+    .limit(limit)
+    .lean();
   return docs.map(docToCity);
 }
 
@@ -81,7 +92,10 @@ export async function searchCities(query: string): Promise<City[]> {
   return docs.map(docToCity);
 }
 
-const STATES: Record<string, { name: string; avgTax: number; avgCostIndex: number }> = {
+const STATES: Record<
+  string,
+  { name: string; avgTax: number; avgCostIndex: number }
+> = {
   NY: { name: "New York", avgTax: 6.85, avgCostIndex: 132.5 },
   CA: { name: "California", avgTax: 9.3, avgCostIndex: 149.8 },
   WA: { name: "Washington", avgTax: 0.0, avgCostIndex: 132.0 },
@@ -114,13 +128,18 @@ const STATES: Record<string, { name: string; avgTax: number; avgCostIndex: numbe
   DC: { name: "Washington DC", avgTax: 8.95, avgCostIndex: 155.2 },
 };
 
-export async function getStateInfo(stateCode: string): Promise<{ name: string; avgTax: number; avgCostIndex: number } | undefined> {
+export async function getStateInfo(
+  stateCode: string,
+): Promise<{ name: string; avgTax: number; avgCostIndex: number } | undefined> {
   await ensureConnection();
-  const docs = await CityModel.find({ stateCode: stateCode.toUpperCase() }).lean();
+  const docs = await CityModel.find({
+    stateCode: stateCode.toUpperCase(),
+  }).lean();
   if (!docs.length) return undefined;
   const cities = docs.map(docToCity);
   const avgTax = cities.reduce((s, c) => s + c.taxRate, 0) / cities.length;
-  const avgCostIndex = cities.reduce((s, c) => s + c.costIndex, 0) / cities.length;
+  const avgCostIndex =
+    cities.reduce((s, c) => s + c.costIndex, 0) / cities.length;
   const stateInfo = STATES[stateCode.toUpperCase()];
   return {
     name: stateInfo?.name ?? cities[0].state,

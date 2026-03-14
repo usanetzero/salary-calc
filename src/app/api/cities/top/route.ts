@@ -8,7 +8,8 @@ export async function GET(request: NextRequest) {
     const cities = await getTopCities(limit);
     return NextResponse.json(cities);
   } catch (e: unknown) {
-    const message = e instanceof Error ? e.message : "Failed to fetch top cities";
+    const message =
+      e instanceof Error ? e.message : "Failed to fetch top cities";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }

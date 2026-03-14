@@ -3,7 +3,7 @@ import { getStateInfo } from "@/lib/storage";
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: Promise<{ stateCode: string }> }
+  { params }: { params: Promise<{ stateCode: string }> },
 ) {
   try {
     const { stateCode } = await params;
@@ -13,7 +13,8 @@ export async function GET(
     }
     return NextResponse.json(info);
   } catch (e: unknown) {
-    const message = e instanceof Error ? e.message : "Failed to fetch state info";
+    const message =
+      e instanceof Error ? e.message : "Failed to fetch state info";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }

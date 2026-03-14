@@ -64,7 +64,7 @@ const CitySchema = new Schema<ICityDocument>(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 CitySchema.index({ costIndex: 1 });

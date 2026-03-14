@@ -9,7 +9,10 @@ export async function GET(request: NextRequest) {
     const to = searchParams.get("to");
 
     if (!salary || !from || !to) {
-      return NextResponse.json({ error: "Missing parameters: salary, from, to" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Missing parameters: salary, from, to" },
+        { status: 400 },
+      );
     }
 
     const fromCity = await getCityBySlug(from);
@@ -37,7 +40,8 @@ export async function GET(request: NextRequest) {
       multiplier: toCity.costIndex / fromCity.costIndex,
     });
   } catch (e: unknown) {
-    const message = e instanceof Error ? e.message : "Failed to calculate salary adjustment";
+    const message =
+      e instanceof Error ? e.message : "Failed to calculate salary adjustment";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }

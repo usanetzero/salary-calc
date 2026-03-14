@@ -14,7 +14,11 @@ interface FAQSectionProps {
   items: FAQItem[];
 }
 
-export function FAQSection({ title = "Frequently Asked Questions", subtitle, items }: FAQSectionProps) {
+export function FAQSection({
+  title = "Frequently Asked Questions",
+  subtitle,
+  items,
+}: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -22,7 +26,9 @@ export function FAQSection({ title = "Frequently Asked Questions", subtitle, ite
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold mb-2">{title}</h2>
         {subtitle && (
-          <p className="text-muted-foreground max-w-xl mx-auto text-sm">{subtitle}</p>
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm">
+            {subtitle}
+          </p>
         )}
       </div>
 
@@ -57,7 +63,10 @@ export function FAQSection({ title = "Frequently Asked Questions", subtitle, ite
               itemProp="acceptedAnswer"
               itemType="https://schema.org/Answer"
             >
-              <div className="px-4 pb-4 text-sm text-muted-foreground leading-relaxed" itemProp="text">
+              <div
+                className="px-4 pb-4 text-sm text-muted-foreground leading-relaxed"
+                itemProp="text"
+              >
                 {item.answer}
               </div>
             </div>

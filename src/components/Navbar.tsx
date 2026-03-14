@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -24,7 +24,9 @@ export function Navbar() {
       return;
     }
     const controller = new AbortController();
-    fetch(`/api/cities/search?q=${encodeURIComponent(searchQuery)}`, { signal: controller.signal })
+    fetch(`/api/cities/search?q=${encodeURIComponent(searchQuery)}`, {
+      signal: controller.signal,
+    })
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) setSearchResults(data);
@@ -35,7 +37,10 @@ export function Navbar() {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
         setShowSearch(false);
         setSearchQuery("");
       }
@@ -61,7 +66,9 @@ export function Navbar() {
               </div>
               <div className="hidden sm:block">
                 <span className="font-bold text-lg leading-none">CostWise</span>
-                <span className="text-xs text-muted-foreground block leading-none">USA Cost of Living</span>
+                <span className="text-xs text-muted-foreground block leading-none">
+                  USA Cost of Living
+                </span>
               </div>
             </div>
           </Link>
@@ -72,7 +79,11 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={pathname === link.href ? "bg-accent text-accent-foreground" : ""}
+                  className={
+                    pathname === link.href
+                      ? "bg-accent text-accent-foreground"
+                      : ""
+                  }
                 >
                   {link.label}
                 </Button>
@@ -94,15 +105,25 @@ export function Navbar() {
                 {searchResults.length > 0 && searchQuery.length >= 2 && (
                   <div className="absolute top-full left-0 right-0 mt-1 bg-popover border border-popover-border rounded-md shadow-lg z-50 overflow-hidden">
                     {searchResults.map((city) => (
-                      <Link key={city.slug} href={`/cost-of-living/${city.slug}`}>
+                      <Link
+                        key={city.slug}
+                        href={`/cost-of-living/${city.slug}`}
+                      >
                         <div
                           className="flex items-center gap-3 px-3 py-2 cursor-pointer hover:bg-accent"
-                          onClick={() => { setShowSearch(false); setSearchQuery(""); }}
+                          onClick={() => {
+                            setShowSearch(false);
+                            setSearchQuery("");
+                          }}
                         >
                           <MapPin className="w-3 h-3 text-muted-foreground flex-shrink-0" />
                           <div>
-                            <div className="text-sm font-medium">{city.name}</div>
-                            <div className="text-xs text-muted-foreground">{city.state}</div>
+                            <div className="text-sm font-medium">
+                              {city.name}
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              {city.state}
+                            </div>
                           </div>
                           <div className="ml-auto text-xs text-muted-foreground">
                             Index: {city.costIndex.toFixed(0)}
@@ -114,7 +135,11 @@ export function Navbar() {
                 )}
               </div>
             ) : (
-              <Button variant="ghost" size="icon" onClick={() => setShowSearch(true)}>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setShowSearch(true)}
+              >
                 <Search className="w-4 h-4" />
               </Button>
             )}
@@ -124,7 +149,11 @@ export function Navbar() {
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-              {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              {theme === "dark" ? (
+                <Sun className="w-4 h-4" />
+              ) : (
+                <Moon className="w-4 h-4" />
+              )}
             </Button>
 
             <Button
@@ -133,7 +162,11 @@ export function Navbar() {
               className="md:hidden"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
-              {mobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              {mobileOpen ? (
+                <X className="w-4 h-4" />
+              ) : (
+                <Menu className="w-4 h-4" />
+              )}
             </Button>
           </div>
         </div>

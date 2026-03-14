@@ -37,7 +37,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Free, data-driven cost of living comparisons for US cities using Census, BEA, HUD, and BLS data.
+              Free, data-driven cost of living comparisons for US cities using
+              Census, BEA, HUD, and BLS data.
             </p>
           </div>
 
@@ -117,7 +118,8 @@ export function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} CostWise. Data sourced from US Census Bureau, BEA, HUD, and BLS.
+            © {new Date().getFullYear()} CostWise. Data sourced from US Census
+            Bureau, BEA, HUD, and BLS.
           </p>
           <p className="text-xs text-muted-foreground">
             Data is updated periodically. For reference only.

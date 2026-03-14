@@ -13,8 +13,12 @@ export async function GET() {
     let cityCount = 0;
 
     if (mongoConnected) {
-      const latest = await CityModel.findOne({}).sort({ dataLastUpdated: -1 }).lean();
-      lastUpdated = latest ? (latest as Record<string, unknown>).dataLastUpdated as Date : null;
+      const latest = await CityModel.findOne({})
+        .sort({ dataLastUpdated: -1 })
+        .lean();
+      lastUpdated = latest
+        ? ((latest as Record<string, unknown>).dataLastUpdated as Date)
+        : null;
       cityCount = await CityModel.countDocuments();
     }
 
@@ -27,13 +31,19 @@ export async function GET() {
         {
           name: "US Census Bureau",
           description: "American Community Survey 5-Year Estimates (ACS5)",
-          fields: ["medianIncome", "medianRent", "medianHomeValue", "population"],
+          fields: [
+            "medianIncome",
+            "medianRent",
+            "medianHomeValue",
+            "population",
+          ],
           url: "https://api.census.gov/data/2022/acs/acs5",
           updateFrequency: "Annual",
         },
         {
           name: "Bureau of Economic Analysis (BEA)",
-          description: "Regional Price Parities (MARPP) — cost index where US avg = 100",
+          description:
+            "Regional Price Parities (MARPP) — cost index where US avg = 100",
           fields: ["costIndex"],
           url: "https://apps.bea.gov/api/data",
           updateFrequency: "Annual",
@@ -47,8 +57,15 @@ export async function GET() {
         },
         {
           name: "Bureau of Labor Statistics (BLS)",
-          description: "Local Area Unemployment Statistics (LAUS) + Consumer Price Index (CPI)",
-          fields: ["unemploymentRate", "utilitiesIndex", "groceryIndex", "transportationIndex", "healthcareIndex"],
+          description:
+            "Local Area Unemployment Statistics (LAUS) + Consumer Price Index (CPI)",
+          fields: [
+            "unemploymentRate",
+            "utilitiesIndex",
+            "groceryIndex",
+            "transportationIndex",
+            "healthcareIndex",
+          ],
           url: "https://api.bls.gov/publicAPI/v2/timeseries/data/",
           updateFrequency: "Monthly / Annual",
         },
@@ -62,7 +79,8 @@ export async function GET() {
       ],
     });
   } catch (e: unknown) {
-    const message = e instanceof Error ? e.message : "Failed to fetch data source info";
+    const message =
+      e instanceof Error ? e.message : "Failed to fetch data source info";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }

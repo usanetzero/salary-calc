@@ -1,0 +1,8734 @@
+{
+  "lausResults": [
+    {
+      "seriesID": "LAUMT363562000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.5",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "5.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT063108000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.8",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "5.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "5.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "6.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "5.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "5.4",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT171698000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.5",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT482642000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.2",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT043806000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.5",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT484170000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.7",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT064174000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.4",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT481910000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT064194000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.0",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT481242000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.2",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT122726000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT391814000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT182690000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "2.5",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "2.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT371674000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT064186000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.1",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT534266000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "5.0",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT081974000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT403642000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "2.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "2.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.3",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT114790000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.8",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT473498000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "2.9",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "2.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "2.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "2.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "2.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT482134000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.1",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT251446000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.3",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT261982000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.7",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "5.6",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT413890000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.9",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "5.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT322982000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "5.2",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "5.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "5.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "5.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "6.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "5.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "5.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "5.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "5.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "6.1",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT473282000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.0",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT213114000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.1",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT241258000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "2.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT553334000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.1",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT351074000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.9",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT044606000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.1",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT064090000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.8",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "5.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "5.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT131206000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.3",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT292814000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.5",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT313654000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.2",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT081782000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT123310000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.5",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT373958000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.0",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "2.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT514726000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT273346000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.0",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.2",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT124530000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "5.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT223538000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.0",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "5.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT204862000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.7",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.0",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT391714000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "5.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.9",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT123674000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "4.4",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "4.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "3.8",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT423830000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.6",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.4",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "3.9",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "LAUMT294118000000003",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "latest": "true",
+          "value": "3.5",
+          "footnotes": [
+            {
+              "code": "P",
+              "text": "Preliminary."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "3.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations."
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "4.5",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "3.7",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "3.6",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "4.1",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "4.2",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "4.3",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    }
+  ],
+  "cpiResults": [
+    {
+      "seriesID": "CUURS11ASAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "359.243",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "361.306",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "362.556",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "360.709",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "360.553",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "357.557",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "356.345",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS11ASAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS11ASAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "247.176",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "247.725",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "247.485",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "248.071",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "246.680",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "244.545",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "247.588",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49ASAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "352.762",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "356.415",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "356.154",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "354.579",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "354.653",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "351.277",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "351.933",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "352.800",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "353.149",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "351.139",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "349.918",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "348.368",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49ASAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS49ASAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "281.197",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "282.183",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "285.372",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "283.151",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "280.204",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "280.450",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "282.593",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "284.050",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "283.830",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "281.172",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "276.965",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "273.198",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS23ASAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "330.458",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "329.825",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "332.489",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "334.964",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "333.806",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "331.464",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "330.023",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "331.397",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "329.237",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "328.261",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "326.484",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "327.091",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS23ASAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS23ASAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "247.239",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "236.168",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "245.899",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "250.299",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "250.002",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "250.177",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "250.113",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "248.721",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "247.256",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "247.176",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "246.954",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "246.859",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35CSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "350.193",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "361.001",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "353.772",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "349.419",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "346.310",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "346.998",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35CSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS35CSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "281.532",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "266.627",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "283.145",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "283.533",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "284.160",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "283.325",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS48ASAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "195.942",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "196.909",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "195.254",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "197.262",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "196.240",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "194.236",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS48ASAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS48ASAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "156.154",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "154.384",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "156.444",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "156.511",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "156.509",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "155.780",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49ESAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "339.390",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "336.898",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "341.108",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "343.795",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "340.171",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "339.124",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "336.889",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49ESAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS49ESAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "306.893",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "311.235",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "310.069",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "309.120",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "308.308",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "304.656",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "299.610",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35BSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "343.070",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "347.603",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "345.109",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "344.594",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "340.169",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "339.434",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35BSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS35BSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "290.523",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "281.982",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "292.377",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "292.132",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "291.254",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "291.567",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49BSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "382.155",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "390.239",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "384.948",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "382.613",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "379.734",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "377.865",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49BSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS49BSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "267.011",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "262.821",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "267.000",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "268.953",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "270.137",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "270.502",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49DSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "375.088",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "386.827",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "377.107",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "378.697",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "372.972",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "371.913",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49DSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS49DSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "321.702",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "318.959",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "326.495",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "325.087",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "320.894",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "316.317",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS48BSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "321.949",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "321.560",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "323.652",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "319.482",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "321.795",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "321.042",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "321.317",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS48BSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS48BSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "343.667",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "338.822",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "349.470",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "348.279",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "344.348",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "342.355",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "341.902",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35ASAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "325.655",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "328.506",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "330.909",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "325.774",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "324.837",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "323.351",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "321.023",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35ASAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS35ASAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "284.598",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "284.128",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "285.945",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "286.993",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "284.747",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "282.907",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "283.871",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS12BSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "311.898",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "316.486",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "314.549",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "310.186",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "311.211",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "311.911",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS12BSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS12BSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "291.577",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "293.862",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "293.253",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "292.228",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "290.143",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "289.821",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS23BSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "293.870",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "297.130",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "295.073",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "293.193",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "292.164",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "291.599",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS23BSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS23BSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "332.969",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "329.109",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "332.177",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "337.153",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "333.480",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "333.491",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49FSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "385.939",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "391.391",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "386.571",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "385.138",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "387.497",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "383.789",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "381.896",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS49FSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS49FSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "284.358",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "284.329",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "286.717",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "287.815",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "283.486",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "281.498",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "283.017",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS24BSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "337.825",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "343.890",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "337.870",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "336.471",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "338.946",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "336.869",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS24BSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS24BSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "254.811",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "249.326",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "254.837",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "256.460",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "255.446",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "256.166",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35DSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "310.314",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "312.148",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "315.167",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "314.259",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "311.322",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "305.981",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "302.117",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35DSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS35DSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "267.455",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "266.682",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "267.771",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "267.762",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "266.604",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "266.699",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "270.090",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35ESAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "345.137",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "350.376",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "345.338",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "345.411",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "345.905",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "343.981",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS35ESAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS35ESAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "291.816",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "288.599",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "292.679",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "293.077",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "293.046",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "291.231",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS24ASAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "361.133",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "362.600",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "363.571",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "362.588",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "361.387",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "358.874",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "357.007",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS24ASAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS24ASAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "239.612",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "242.365",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "242.961",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "241.151",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "237.062",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "238.367",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "237.519",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS37ASAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "335.341",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "335.540",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "336.354",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "336.205",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "334.987",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "332.875",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "332.351",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS37ASAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS37ASAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "280.474",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M11",
+          "periodName": "November",
+          "value": "275.610",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M09",
+          "periodName": "September",
+          "value": "278.464",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M07",
+          "periodName": "July",
+          "value": "278.934",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M05",
+          "periodName": "May",
+          "value": "279.620",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M03",
+          "periodName": "March",
+          "value": "276.390",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M01",
+          "periodName": "January",
+          "value": "294.596",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS37BSAF1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "311.582",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "317.149",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "312.719",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "311.559",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "309.096",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "309.945",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "seriesID": "CUURS37BSAH2",
+      "data": []
+    },
+    {
+      "seriesID": "CUURS37BSAT1",
+      "data": [
+        {
+          "year": "2025",
+          "period": "M13",
+          "periodName": "Annual",
+          "value": "238.073",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M12",
+          "periodName": "December",
+          "value": "235.463",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M10",
+          "periodName": "October",
+          "value": "-",
+          "footnotes": [
+            {
+              "code": "X",
+              "text": "Data unavailable due to the 2025 lapse in appropriations"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M08",
+          "periodName": "August",
+          "value": "239.693",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M06",
+          "periodName": "June",
+          "value": "239.190",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M04",
+          "periodName": "April",
+          "value": "239.448",
+          "footnotes": [
+            {}
+          ]
+        },
+        {
+          "year": "2025",
+          "period": "M02",
+          "periodName": "February",
+          "value": "237.480",
+          "footnotes": [
+            {}
+          ]
+        }
+      ]
+    }
+  ]
+}

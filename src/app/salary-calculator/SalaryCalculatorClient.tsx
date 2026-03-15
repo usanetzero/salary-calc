@@ -77,13 +77,18 @@ function LifestyleRating({ rentBurden }: { rentBurden: number }) {
   };
 }
 
-export default function SalaryCalculatorClient() {
+export default function SalaryCalculatorClient({
+  initialCities = [],
+}: {
+  initialCities?: City[];
+}) {
   const [salary, setSalary] = useState(80000);
   const [fromCity, setFromCity] = useState("new-york-ny");
   const [toCity, setToCity] = useState("austin-tx");
 
   const { data: cities, isLoading } = useQuery<City[]>({
     queryKey: ["/api/cities"],
+    initialData: initialCities.length > 0 ? initialCities : undefined,
   });
 
   const fromCityData = cities?.find((c) => c.slug === fromCity);
@@ -174,7 +179,7 @@ export default function SalaryCalculatorClient() {
     : 0;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
         <Link href="/">
@@ -185,13 +190,17 @@ export default function SalaryCalculatorClient() {
       </nav>
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">
+        <div className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-2">
+          <Calculator className="w-4 h-4" />
+          Salary Comparison Tool
+        </div>
+        <h1 className="text-3xl md:text-4xl font-bold mb-3">
           Cost of Living Salary Calculator
         </h1>
         <p className="text-muted-foreground max-w-2xl">
-          Find your salary equivalent when moving between US cities. Adjusts for
-          cost of living, state taxes, housing costs, and overall purchasing
-          power.
+          Compare wages vs cost of living when relocating between US cities.
+          Adjusts for housing costs, state income taxes, groceries, utilities,
+          and overall purchasing power across 47+ major metros.
         </p>
       </div>
 

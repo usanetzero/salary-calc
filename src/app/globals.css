@@ -193,3 +193,35 @@
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
+
+/* City slider marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.city-slider {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.city-slider-track {
+  display: flex;
+  gap: 1.25rem;
+  animation: marquee 40s linear infinite;
+  width: max-content;
+}
+
+.city-slider:hover .city-slider-track {
+  animation-play-state: paused;
+}
+
+.city-slider-card {
+  flex-shrink: 0;
+  width: 300px;
+}

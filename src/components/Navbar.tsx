@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Moon, Sun, Search, MapPin, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,7 @@ import { useTheme } from "next-themes";
 import type { City } from "@/lib/types";
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const pathname = usePathname();
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
@@ -61,9 +62,13 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary">
-                <MapPin className="w-4 h-4 text-primary-foreground" />
-              </div>
+              <Image
+                src="/favicon.svg"
+                alt="CostWise"
+                width={32}
+                height={32}
+                className="rounded-md"
+              />
               <div className="hidden sm:block">
                 <span className="font-bold text-lg leading-none">CostWise</span>
                 <span className="text-xs text-muted-foreground block leading-none">
@@ -147,9 +152,12 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
+              aria-label="Toggle theme"
             >
-              {theme === "dark" ? (
+              {resolvedTheme === "dark" ? (
                 <Sun className="w-4 h-4" />
               ) : (
                 <Moon className="w-4 h-4" />

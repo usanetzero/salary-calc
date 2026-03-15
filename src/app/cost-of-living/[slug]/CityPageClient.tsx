@@ -135,9 +135,15 @@ function MetricBar({
   );
 }
 
-export default function CityPageClient() {
+export default function CityPageClient({
+  initialCity,
+  initialAllCities = [],
+}: {
+  initialCity?: City;
+  initialAllCities?: City[];
+}) {
   const params = useParams<{ slug: string }>();
-  const slug = params.slug;
+  const slug = params.slug ?? initialCity?.slug ?? "";
   const [salary, setSalary] = useState(75000);
   const [compareSlug, setCompareSlug] = useState("");
 
@@ -153,10 +159,12 @@ export default function CityPageClient() {
       return res.json();
     },
     enabled: !!slug,
+    initialData: initialCity,
   });
 
   const { data: allCities } = useQuery<City[]>({
     queryKey: ["/api/cities"],
+    initialData: initialAllCities.length > 0 ? initialAllCities : undefined,
   });
 
   const nearbySlugs = NEARBY_CITY_SLUGS[slug || ""] || [];
@@ -169,7 +177,7 @@ export default function CityPageClient() {
 
   if (isLoading) {
     return (
-      <div className="max-w-5xl mx-auto px-4 py-8 space-y-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
         <Skeleton className="h-10 w-64" />
         <Skeleton className="h-6 w-40" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -184,7 +192,7 @@ export default function CityPageClient() {
 
   if (isError || !city) {
     return (
-      <div className="max-w-5xl mx-auto px-4 py-16 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <AlertCircle className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
         <h1 className="text-2xl font-bold mb-2">City Not Found</h1>
         <p className="text-muted-foreground mb-6">
@@ -216,7 +224,7 @@ export default function CityPageClient() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
         <Link href="/">
@@ -240,9 +248,12 @@ export default function CityPageClient() {
               <MapPin className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold leading-tight">{city.name}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                Cost of Living in {city.name}
+              </h1>
               <p className="text-muted-foreground">
-                {city.state} · Population: {formatNumber(city.population)}
+                {city.state} · Population: {formatNumber(city.population)} ·
+                Updated 2025
               </p>
             </div>
           </div>

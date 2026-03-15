@@ -128,6 +128,39 @@ const STATES: Record<
   DC: { name: "Washington DC", avgTax: 8.95, avgCostIndex: 155.2 },
 };
 
+export async function getComparisonData(slugA: string, slugB: string) {
+  const [cityA, cityB] = await Promise.all([
+    getCityBySlug(slugA),
+    getCityBySlug(slugB),
+  ]);
+  if (!cityA || !cityB) return null;
+  const salaryMultiplier = cityB.costIndex / cityA.costIndex;
+  return {
+    cityA,
+    cityB,
+    salaryMultiplier,
+    differences: {
+      rent: ((cityB.medianRent - cityA.medianRent) / cityA.medianRent) * 100,
+      income:
+        ((cityB.medianIncome - cityA.medianIncome) / cityA.medianIncome) * 100,
+      costIndex: ((cityB.costIndex - cityA.costIndex) / cityA.costIndex) * 100,
+      groceries:
+        ((cityB.groceryIndex - cityA.groceryIndex) / cityA.groceryIndex) * 100,
+      utilities:
+        ((cityB.utilitiesIndex - cityA.utilitiesIndex) / cityA.utilitiesIndex) *
+        100,
+      transportation:
+        ((cityB.transportationIndex - cityA.transportationIndex) /
+          cityA.transportationIndex) *
+        100,
+      healthcare:
+        ((cityB.healthcareIndex - cityA.healthcareIndex) /
+          cityA.healthcareIndex) *
+        100,
+    },
+  };
+}
+
 export async function getStateInfo(
   stateCode: string,
 ): Promise<{ name: string; avgTax: number; avgCostIndex: number } | undefined> {

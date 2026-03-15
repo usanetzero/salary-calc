@@ -77,7 +77,11 @@ const US_STATES = [
 
 type SortBy = "costIndex" | "medianRent" | "medianIncome" | "name";
 
-export default function CheapestCitiesClient() {
+export default function CheapestCitiesClient({
+  initialCities = [],
+}: {
+  initialCities?: City[];
+}) {
   const searchParams = useSearchParams();
   const initialState = searchParams.get("state") || "all";
 
@@ -87,6 +91,7 @@ export default function CheapestCitiesClient() {
 
   const { data: cities, isLoading } = useQuery<City[]>({
     queryKey: ["/api/cities"],
+    initialData: initialCities.length > 0 ? initialCities : undefined,
   });
 
   const filteredCities = cities
@@ -117,7 +122,7 @@ export default function CheapestCitiesClient() {
       : `Cheapest Cities in ${selectedStateName}`;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
         <Link href="/">
@@ -130,14 +135,18 @@ export default function CheapestCitiesClient() {
       <div className="mb-8">
         <div className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-2">
           <TrendingDown className="w-4 h-4" />
-          Affordability Rankings
+          Affordability Rankings — 2025
         </div>
-        <h1 className="text-3xl font-bold mb-2" data-testid="text-page-title">
+        <h1
+          className="text-3xl md:text-4xl font-bold mb-3"
+          data-testid="text-page-title"
+        >
           {pageTitle}
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground max-w-2xl">
+          Find the most affordable and cheapest cities to live in America.
           Ranked by cost of living index (100 = national average). Lower is more
-          affordable. Data sourced from Census Bureau, BEA, and HUD.
+          affordable. Data sourced from Census Bureau, BEA, HUD, and BLS.
         </p>
       </div>
 
@@ -256,88 +265,40 @@ export default function CheapestCitiesClient() {
           </CardContent>
         </Card>
       ) : (
-        <div className="space-y-2">
-          {/* Table Header */}
-          <div className="hidden md:grid grid-cols-[auto,1fr,auto,auto,auto,auto] gap-3 px-4 py-2 text-xs font-medium text-muted-foreground">
-            <span className="w-8">#</span>
-            <span>City</span>
-            <span className="w-24 text-right">Cost Index</span>
-            <span className="w-28 text-right">Median Rent</span>
-            <span className="w-28 text-right">Median Income</span>
-            <span className="w-16"></span>
-          </div>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredCities.map((city, idx) => (
             <Link key={city.slug} href={`/cost-of-living/${city.slug}`}>
               <Card
-                className="cursor-pointer hover-elevate"
+                className="cursor-pointer hover-elevate h-full transition-all duration-200"
                 data-testid={`row-city-${city.slug}`}
               >
-                <CardContent className="p-0">
-                  {/* Desktop Row */}
-                  <div className="hidden md:grid grid-cols-[auto,1fr,auto,auto,auto,auto] gap-3 px-4 py-3 items-center">
-                    <span className="w-8 text-sm font-bold text-muted-foreground">
-                      {idx + 1}
-                    </span>
-                    <div>
-                      <div className="font-semibold text-sm">{city.name}</div>
-                      <div className="text-xs text-muted-foreground">
-                        {city.state}
+                <CardContent className="p-5">
+                  <div className="flex items-start justify-between gap-2 mb-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-lg font-bold text-muted-foreground/50 w-8">
+                        {idx + 1}
+                      </span>
+                      <div>
+                        <h3 className="font-semibold text-base leading-tight">
+                          {city.name}
+                        </h3>
+                        <p className="text-xs text-muted-foreground">
+                          {city.state}
+                        </p>
                       </div>
                     </div>
-                    <div className="w-24 text-right">
-                      <div
-                        className={`font-bold text-sm ${costIndexColor(city.costIndex)}`}
-                      >
-                        {city.costIndex.toFixed(1)}
-                      </div>
-                      <Badge
-                        className={`text-xs ${costIndexBg(city.costIndex)}`}
-                      >
-                        {costIndexLabel(city.costIndex)}
-                      </Badge>
-                    </div>
-                    <div className="w-28 text-right text-sm">
-                      <div className="font-medium">
-                        {formatCurrency(city.medianRent)}/mo
-                      </div>
-                    </div>
-                    <div className="w-28 text-right text-sm">
-                      <div className="font-medium">
-                        {formatCurrency(city.medianIncome, { compact: true })}
-                      </div>
-                    </div>
-                    <div className="w-16 flex justify-end">
-                      <ChevronRight className="w-4 h-4 text-muted-foreground" />
-                    </div>
+                    <Badge
+                      className={`text-xs shrink-0 ${costIndexBg(city.costIndex)}`}
+                    >
+                      {costIndexLabel(city.costIndex)}
+                    </Badge>
                   </div>
 
-                  {/* Mobile Card */}
-                  <div className="md:hidden p-4">
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-muted-foreground w-6">
-                          #{idx + 1}
-                        </span>
-                        <div>
-                          <div className="font-semibold text-sm">
-                            {city.name}
-                          </div>
-                          <div className="text-xs text-muted-foreground">
-                            {city.state}
-                          </div>
-                        </div>
-                      </div>
-                      <Badge
-                        className={`text-xs shrink-0 ${costIndexBg(city.costIndex)}`}
-                      >
-                        {costIndexLabel(city.costIndex)}
-                      </Badge>
-                    </div>
-                    <div className="grid grid-cols-3 gap-2 text-xs">
-                      <div>
-                        <span className="text-muted-foreground block">
-                          Index
+                  <div className="space-y-2.5">
+                    <div>
+                      <div className="flex items-center justify-between text-sm mb-1">
+                        <span className="text-muted-foreground">
+                          Cost Index
                         </span>
                         <span
                           className={`font-bold ${costIndexColor(city.costIndex)}`}
@@ -345,23 +306,50 @@ export default function CheapestCitiesClient() {
                           {city.costIndex.toFixed(1)}
                         </span>
                       </div>
-                      <div>
-                        <span className="text-muted-foreground block">
-                          Rent
-                        </span>
-                        <span className="font-medium">
-                          {formatCurrency(city.medianRent)}
-                        </span>
-                      </div>
-                      <div>
-                        <span className="text-muted-foreground block">
-                          Income
-                        </span>
-                        <span className="font-medium">
-                          {formatCurrency(city.medianIncome, { compact: true })}
-                        </span>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div
+                          className={`h-2 rounded-full transition-all ${city.costIndex <= 95 ? "bg-green-500" : city.costIndex <= 105 ? "bg-yellow-500" : "bg-red-500"}`}
+                          style={{
+                            width: `${Math.min((city.costIndex / 150) * 100, 100)}%`,
+                          }}
+                        />
                       </div>
                     </div>
+
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Median Rent</span>
+                      <span className="font-medium">
+                        {formatCurrency(city.medianRent)}/mo
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">
+                        Median Income
+                      </span>
+                      <span className="font-medium">
+                        {formatCurrency(city.medianIncome, { compact: true })}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">State Tax</span>
+                      <span className="font-medium">
+                        {city.taxRate === 0 ? (
+                          <span className="text-green-600 dark:text-green-400">
+                            None
+                          </span>
+                        ) : (
+                          `${city.taxRate}%`
+                        )}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="mt-3 pt-3 border-t border-border flex items-center justify-end">
+                    <span className="text-xs text-primary font-medium flex items-center gap-1">
+                      View Details <ChevronRight className="w-3 h-3" />
+                    </span>
                   </div>
                 </CardContent>
               </Card>
@@ -456,30 +444,39 @@ export default function CheapestCitiesClient() {
           {
             question: "What are the cheapest cities to live in the US in 2025?",
             answer:
-              "Based on the Bureau of Economic Analysis Regional Price Parities, the cheapest major US cities include Oklahoma City (index ~88), Memphis (index ~87), Wichita (index ~87), El Paso (index ~88), and Pittsburgh (index ~91). These cities offer housing costs 25-40% below the national average while still providing strong job markets.",
+              "Based on the Bureau of Economic Analysis Regional Price Parities, the cheapest major US cities include Oklahoma City (index ~88), Memphis (index ~87), Wichita (index ~87), El Paso (index ~88), and Pittsburgh (index ~91). These cities offer housing costs 25–40% below the national average while still providing strong job markets.",
+          },
+          {
+            question:
+              "What is the average cost of living in Arizona for a single person?",
+            answer:
+              "The average cost of living in Arizona varies by city. Phoenix sits close to the national average (index ~100), while Tucson is about 5–8% below average. A single person in Arizona can expect to spend $2,500–$3,500 per month on rent, food, utilities, and transportation. Arizona also benefits from a relatively low state income tax and affordable housing compared to coastal states.",
+          },
+          {
+            question: "How much does it cost to live in Las Vegas?",
+            answer:
+              "The cost of living in Las Vegas is near the national average with a cost index around 100. Monthly costs for a single person average $2,800–$3,500 including rent. A major advantage is Nevada's zero state income tax. Average cost of living in Las Vegas is significantly lower than nearby California cities like Los Angeles or San Francisco.",
           },
           {
             question: "Which states have no income tax?",
             answer:
-              "Nine states have no income tax on wages: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Among major cities, this means Houston, Dallas, Austin, San Antonio, and El Paso (Texas), Miami, Tampa, Jacksonville, and Orlando (Florida), Seattle (Washington), Nashville and Memphis (Tennessee), and Las Vegas (Nevada) all benefit from zero state income tax.",
+              "Nine states have no income tax on wages: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Major cities like Houston, Dallas, Miami, Nashville, Las Vegas, and Seattle all benefit from zero state income tax — making them popular destinations for people looking to maximize take-home pay.",
           },
           {
-            question:
-              "Is it better to live in a cheap city with lower salaries?",
+            question: "What are the cheapest states to retire in?",
             answer:
-              "Often yes. In many affordable cities, the cost savings exceed the salary reduction. For example, a software developer earning $120,000 in San Francisco (cost index ~128) versus $90,000 in Austin (cost index ~101) would have significantly more purchasing power in Austin after accounting for rent, taxes, and daily expenses.",
+              "The cheapest states to retire in include Texas, Oklahoma, Tennessee, Arkansas, Mississippi, and Kansas — offering low cost of living indices, no or low state income tax, and affordable housing. Cities like Wichita, Memphis, Oklahoma City, and San Antonio are popular retirement destinations combining low costs with good healthcare access.",
+          },
+          {
+            question: "Is Montana an affordable place to live?",
+            answer:
+              "Montana's cost of living varies significantly. Rural areas are affordable (10–15% below national average) but cities like Bozeman and Missoula have seen rapid price increases due to remote workers relocating. Montana has no state sales tax, which helps offset costs. The Montana cost of living overall is slightly below the national average but rising.",
           },
           {
             question:
               "How do housing costs vary between cheap and expensive cities?",
             answer:
-              "Housing shows the widest variation. A 2-bedroom apartment in San Francisco averages $2,682/month (HUD FMR), while the same in Wichita costs $948/month — a 64% savings. Median home values range from under $180,000 in affordable cities to over $1.3 million in San Jose.",
-          },
-          {
-            question:
-              "What should I consider beyond cost of living when choosing a city?",
-            answer:
-              "Important factors include: job market strength and industry presence for your career, quality of healthcare and education, climate and natural disaster risk, commute times, cultural amenities, proximity to family, and long-term economic growth. A city that's cheap today might not offer the career advancement you need.",
+              "Housing shows the widest variation in cost of living. A 2-bedroom apartment in San Francisco averages $2,682/month (HUD FMR), while the same in Wichita costs $948/month — a 64% savings. Median home values range from under $180,000 in affordable cities to over $1.3 million in San Jose.",
           },
         ]}
       />

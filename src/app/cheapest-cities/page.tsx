@@ -1,11 +1,15 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import CheapestCitiesClient from "./CheapestCitiesClient";
+import { getAllCities } from "@/lib/storage";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Cheapest Cities to Live in the US (2025 Rankings)",
+  title:
+    "Cheapest Cities to Live in the US (2025 Rankings) – Most Affordable Places",
   description:
-    "Discover the most affordable cities in America ranked by cost of living index. Compare housing costs, median rent, income, state taxes, and quality of life across 47 major US cities. Updated with 2023 Census and BEA data.",
+    "Discover the most affordable and cheapest cities to live in America ranked by cost of living index. Compare housing costs, median rent, income, state taxes, and quality of life in Arizona, Las Vegas, Montana, and 47+ US cities. Updated 2025 with Census and BEA data.",
   keywords: [
     "cheapest cities to live in US",
     "cheapest cities to live in America",
@@ -17,6 +21,10 @@ export const metadata: Metadata = {
     "cities with lowest rent",
     "cities with no state income tax",
     "best value cities to live in US",
+    "cost of living in arizona",
+    "average cost of living in arizona",
+    "cost of living in las vegas",
+    "cheapest states to retire in",
   ],
   openGraph: {
     title: "Cheapest Cities to Live in the US (2025) | CostWise",
@@ -25,10 +33,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CheapestCitiesPage() {
+export default async function CheapestCitiesPage() {
+  const cities = await getAllCities().catch(() => []);
   return (
     <Suspense>
-      <CheapestCitiesClient />
+      <CheapestCitiesClient initialCities={cities} />
     </Suspense>
   );
 }

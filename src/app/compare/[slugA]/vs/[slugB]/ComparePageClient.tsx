@@ -85,10 +85,16 @@ function DiffBadge({
   );
 }
 
-export default function ComparePageClient() {
+export default function ComparePageClient({
+  initialComparison,
+  initialAllCities = [],
+}: {
+  initialComparison?: ComparisonData;
+  initialAllCities?: City[];
+}) {
   const params = useParams<{ slugA: string; slugB: string }>();
-  const slugA = params.slugA;
-  const slugB = params.slugB;
+  const slugA = params.slugA ?? initialComparison?.cityA?.slug ?? "";
+  const slugB = params.slugB ?? initialComparison?.cityB?.slug ?? "";
   const router = useRouter();
   const [salary, setSalary] = useState(80000);
   const [customA, setCustomA] = useState(slugA || "");
@@ -106,10 +112,12 @@ export default function ComparePageClient() {
       return res.json();
     },
     enabled: !!slugA && !!slugB,
+    initialData: initialComparison,
   });
 
   const { data: allCities } = useQuery<City[]>({
     queryKey: ["/api/cities"],
+    initialData: initialAllCities.length > 0 ? initialAllCities : undefined,
   });
 
   const handleCompare = () => {
@@ -120,7 +128,7 @@ export default function ComparePageClient() {
 
   if (isLoading) {
     return (
-      <div className="max-w-5xl mx-auto px-4 py-8 space-y-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
         <Skeleton className="h-10 w-80" />
         <div className="grid grid-cols-2 gap-6">
           <Skeleton className="h-48" />
@@ -133,7 +141,7 @@ export default function ComparePageClient() {
 
   if (isError || !comparison) {
     return (
-      <div className="max-w-5xl mx-auto px-4 py-16 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <AlertCircle className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
         <h1 className="text-2xl font-bold mb-2">Comparison Not Available</h1>
         <p className="text-muted-foreground mb-6">
@@ -256,7 +264,7 @@ export default function ComparePageClient() {
   ).length;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
         <Link href="/">
@@ -267,6 +275,18 @@ export default function ComparePageClient() {
           {cityA.name} vs {cityB.name}
         </span>
       </nav>
+
+      <div className="mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold mb-3">
+          {cityA.name} vs {cityB.name}: Cost of Living Comparison
+        </h1>
+        <p className="text-muted-foreground max-w-2xl">
+          Compare cost of living between {cityA.name}, {cityA.stateCode} and{" "}
+          {cityB.name}, {cityB.stateCode}. Side-by-side breakdown of housing
+          costs, rent, groceries, utilities, transportation, healthcare, state
+          taxes, and salary equivalents.
+        </p>
+      </div>
 
       {/* City Selector */}
       <Card className="mb-8">
@@ -445,80 +465,95 @@ export default function ComparePageClient() {
         </CardContent>
       </Card>
 
-      {/* Category Table */}
+      {/* Category Comparison */}
       <Card className="mb-8">
         <CardHeader className="pb-4">
-          <CardTitle>Category Comparison</CardTitle>
+          <CardTitle>Category-by-Category Breakdown</CardTitle>
           <p className="text-xs text-muted-foreground">
-            Index scores where 100 = national average. Lower is better for cost
-            categories.
+            Index scores where 100 = national average. Green highlights the city
+            with the advantage.
           </p>
         </CardHeader>
-        <CardContent>
-          <div className="space-y-1">
-            <div className="grid grid-cols-[1fr,auto,auto,auto] gap-3 px-3 py-1.5 text-xs font-medium text-muted-foreground">
-              <span>Category</span>
-              <span className="text-right w-20">
-                {cityA.name.split(" ")[0]}
-              </span>
-              <span className="text-right w-20">
-                {cityB.name.split(" ")[0]}
-              </span>
-              <span className="text-right w-16">Diff</span>
-            </div>
-            {categoryRows.map((row) => {
-              const aWins = row.lower
-                ? row.valueA < row.valueB
-                : row.valueA > row.valueB;
-              const bWins = row.lower
-                ? row.valueB < row.valueA
-                : row.valueB > row.valueA;
-              return (
-                <div
-                  key={row.label}
-                  className="grid grid-cols-[1fr,auto,auto,auto] gap-3 px-3 py-2.5 rounded-md items-center odd:bg-muted/30"
-                >
-                  <span className="text-sm flex items-center gap-1.5">
-                    <row.icon className="w-3.5 h-3.5 text-muted-foreground" />
-                    {row.label}
-                  </span>
-                  <span
-                    className={`text-sm font-medium text-right w-20 ${aWins ? "text-green-600 dark:text-green-400" : ""}`}
-                  >
-                    {row.currency
-                      ? formatCurrency(row.valueA, { compact: true })
-                      : row.valueA.toFixed(
-                          row.label === "State Tax Rate" ? 2 : 1,
-                        )}
-                    {row.label === "State Tax Rate" && row.valueA === 0
-                      ? "None"
-                      : ""}
-                    {row.label === "State Tax Rate" && row.valueA > 0
-                      ? "%"
-                      : ""}
-                  </span>
-                  <span
-                    className={`text-sm font-medium text-right w-20 ${bWins ? "text-green-600 dark:text-green-400" : ""}`}
-                  >
-                    {row.currency
-                      ? formatCurrency(row.valueB, { compact: true })
-                      : row.valueB.toFixed(
-                          row.label === "State Tax Rate" ? 2 : 1,
-                        )}
-                    {row.label === "State Tax Rate" && row.valueB === 0
-                      ? "None"
-                      : ""}
-                    {row.label === "State Tax Rate" && row.valueB > 0
-                      ? "%"
-                      : ""}
-                  </span>
-                  <span className="text-right w-16">
+        <CardContent className="space-y-3">
+          {categoryRows.map((row) => {
+            const aWins = row.lower
+              ? row.valueA < row.valueB
+              : row.valueA > row.valueB;
+            const bWins = row.lower
+              ? row.valueB < row.valueA
+              : row.valueB > row.valueA;
+            const maxVal = Math.max(row.valueA, row.valueB, 1);
+            return (
+              <div
+                key={row.label}
+                className="rounded-lg border border-border p-4 hover:bg-muted/20 transition-colors"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-7 h-7 rounded-md bg-primary/10 flex items-center justify-center">
+                    <row.icon className="w-3.5 h-3.5 text-primary" />
+                  </div>
+                  <span className="text-sm font-semibold">{row.label}</span>
+                  <span className="ml-auto">
                     <DiffBadge value={row.diff} reverse={!row.lower} />
                   </span>
                 </div>
-              );
-            })}
-          </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs text-muted-foreground">
+                        {cityA.name}
+                      </span>
+                      <span
+                        className={`text-sm font-bold ${aWins ? "text-green-600 dark:text-green-400" : ""}`}
+                      >
+                        {row.currency
+                          ? formatCurrency(row.valueA, { compact: true })
+                          : row.label === "State Tax Rate"
+                            ? row.valueA === 0
+                              ? "None"
+                              : `${row.valueA.toFixed(2)}%`
+                            : row.valueA.toFixed(1)}
+                      </span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full transition-all ${aWins ? "bg-green-500" : "bg-muted-foreground/30"}`}
+                        style={{
+                          width: `${row.currency ? (row.valueA / maxVal) * 100 : (row.valueA / Math.max(maxVal, 200)) * 100}%`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs text-muted-foreground">
+                        {cityB.name}
+                      </span>
+                      <span
+                        className={`text-sm font-bold ${bWins ? "text-green-600 dark:text-green-400" : ""}`}
+                      >
+                        {row.currency
+                          ? formatCurrency(row.valueB, { compact: true })
+                          : row.label === "State Tax Rate"
+                            ? row.valueB === 0
+                              ? "None"
+                              : `${row.valueB.toFixed(2)}%`
+                            : row.valueB.toFixed(1)}
+                      </span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full transition-all ${bWins ? "bg-green-500" : "bg-muted-foreground/30"}`}
+                        style={{
+                          width: `${row.currency ? (row.valueB / maxVal) * 100 : (row.valueB / Math.max(maxVal, 200)) * 100}%`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </CardContent>
       </Card>
 

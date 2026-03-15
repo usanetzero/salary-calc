@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
 const topCityLinks = [
@@ -30,9 +30,13 @@ export function Footer() {
           <div className="md:col-span-1">
             <Link href="/">
               <div className="flex items-center gap-2 mb-4 cursor-pointer">
-                <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary">
-                  <MapPin className="w-4 h-4 text-primary-foreground" />
-                </div>
+                <Image
+                  src="/favicon.svg"
+                  alt="CostWise"
+                  width={32}
+                  height={32}
+                  className="rounded-md"
+                />
                 <span className="font-bold text-lg">CostWise</span>
               </div>
             </Link>

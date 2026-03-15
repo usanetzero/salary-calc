@@ -1,8 +1,4 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { useQuery } from "@tanstack/react-query";
 import {
   MapPin,
   TrendingUp,
@@ -20,17 +16,8 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Slider } from "@/components/ui/slider";
 import { FAQSection } from "@/components/FAQSection";
 import type { City } from "@/lib/types";
 import {
@@ -39,6 +26,10 @@ import {
   costIndexBg,
   costIndexColor,
 } from "@/lib/utils";
+import { getAllCities, getTopCities } from "@/lib/storage";
+import HomeSandboxClient from "./HomeSandboxClient";
+
+export const revalidate = 3600;
 
 const TRENDING_COMPARISONS = [
   {
@@ -160,157 +151,11 @@ function CityCard({ city }: { city: City }) {
   );
 }
 
-function SalarySandboxCalculator({ cities }: { cities: City[] }) {
-  const [salary, setSalary] = useState(80000);
-  const [fromCity, setFromCity] = useState("new-york-ny");
-  const [toCity, setToCity] = useState("austin-tx");
-
-  const fromCityData = cities.find((c) => c.slug === fromCity);
-  const toCityData = cities.find((c) => c.slug === toCity);
-
-  const adjustedSalary =
-    fromCityData && toCityData
-      ? salary * (toCityData.costIndex / fromCityData.costIndex)
-      : null;
-
-  const diff = adjustedSalary ? adjustedSalary - salary : null;
-
-  return (
-    <Card className="shadow-lg">
-      <CardHeader className="pb-4">
-        <CardTitle className="text-xl flex items-center gap-2">
-          <Calculator className="w-5 h-5 text-primary" />
-          Quick Salary Adjustment
-        </CardTitle>
-        <p className="text-sm text-muted-foreground">
-          See how your salary compares in a different city. 100 = national
-          average.
-        </p>
-      </CardHeader>
-      <CardContent className="space-y-5">
-        <div>
-          <label className="text-sm font-medium mb-2 block">Your Salary</label>
-          <div className="flex items-center gap-3">
-            <span className="text-2xl font-bold text-primary">
-              {formatCurrency(salary)}
-            </span>
-          </div>
-          <Slider
-            value={[salary]}
-            onValueChange={([v]) => setSalary(v)}
-            min={20000}
-            max={300000}
-            step={5000}
-            className="mt-3"
-          />
-          <div className="flex justify-between text-xs text-muted-foreground mt-1">
-            <span>$20K</span>
-            <span>$300K</span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="text-sm font-medium mb-1.5 block">
-              From City
-            </label>
-            <Select value={fromCity} onValueChange={setFromCity}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {cities.map((c) => (
-                  <SelectItem key={c.slug} value={c.slug}>
-                    {c.name}, {c.stateCode}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <label className="text-sm font-medium mb-1.5 block">To City</label>
-            <Select value={toCity} onValueChange={setToCity}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {cities.map((c) => (
-                  <SelectItem key={c.slug} value={c.slug}>
-                    {c.name}, {c.stateCode}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
-
-        {adjustedSalary !== null &&
-          diff !== null &&
-          fromCityData &&
-          toCityData && (
-            <div className="rounded-md bg-accent p-4 space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">
-                  Equivalent Salary in {toCityData.name}
-                </span>
-                <span className="text-xl font-bold">
-                  {formatCurrency(adjustedSalary)}
-                </span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">Difference</span>
-                <span
-                  className={
-                    diff > 0
-                      ? "text-green-600 dark:text-green-400 font-medium"
-                      : "text-red-600 dark:text-red-400 font-medium"
-                  }
-                >
-                  {diff > 0 ? "+" : ""}
-                  {formatCurrency(diff)}
-                </span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">
-                  Cost Index: {fromCityData.name}
-                </span>
-                <span className="font-medium">
-                  {fromCityData.costIndex.toFixed(1)}
-                </span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">
-                  Cost Index: {toCityData.name}
-                </span>
-                <span className="font-medium">
-                  {toCityData.costIndex.toFixed(1)}
-                </span>
-              </div>
-            </div>
-          )}
-
-        <Link href="/salary-calculator">
-          <Button className="w-full gap-2">
-            Full Salary Calculator <ArrowRight className="w-4 h-4" />
-          </Button>
-        </Link>
-      </CardContent>
-    </Card>
-  );
-}
-
-export default function Home() {
-  const { data: cities } = useQuery<City[]>({
-    queryKey: ["/api/cities"],
-  });
-
-  const { data: topCities, isLoading: loadingTop } = useQuery<City[]>({
-    queryKey: ["/api/cities/top"],
-    queryFn: async () => {
-      const res = await fetch("/api/cities/top?limit=12");
-      return res.json();
-    },
-  });
+export default async function Home() {
+  const [cities, topCities] = await Promise.all([
+    getAllCities().catch(() => [] as City[]),
+    getTopCities(12).catch(() => [] as City[]),
+  ]);
 
   return (
     <div className="min-h-screen">
@@ -329,10 +174,11 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-white/85 mb-8 leading-relaxed max-w-2xl">
-              Compare cost of living index across 47 major US cities. Calculate
+              Compare cost of living across 47 major US cities — from Arizona
+              and Las Vegas to Montana, New York, and the Bay Area. Calculate
               salary equivalents, compare housing costs, state taxes, rent
-              prices, and find the cheapest cities to live in America — powered
-              by Census, BEA, HUD, and BLS data.
+              prices, and find the cheapest and most affordable cities to live
+              in America. Powered by Census, BEA, HUD, and BLS data.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/salary-calculator">
@@ -442,23 +288,12 @@ export default function Home() {
               </div>
             </div>
             <div>
-              {cities ? (
-                <SalarySandboxCalculator cities={cities} />
-              ) : (
-                <Card>
-                  <CardContent className="p-6">
-                    <Skeleton className="h-6 w-48 mb-4" />
-                    <Skeleton className="h-10 w-full mb-3" />
-                    <Skeleton className="h-10 w-full mb-3" />
-                    <Skeleton className="h-20 w-full" />
-                  </CardContent>
-                </Card>
-              )}
+              <HomeSandboxClient cities={cities} />
             </div>
           </div>
         </section>
 
-        {/* Top Cities Grid */}
+        {/* Top Cities Slider */}
         <section>
           <div className="flex items-center justify-between mb-6 gap-4">
             <div>
@@ -476,30 +311,21 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-
-          {loadingTop ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <Card key={i}>
-                  <CardContent className="p-5">
-                    <Skeleton className="h-5 w-32 mb-2" />
-                    <Skeleton className="h-4 w-20 mb-4" />
-                    <Skeleton className="h-4 w-full mb-2" />
-                    <Skeleton className="h-4 w-full mb-2" />
-                    <Skeleton className="h-4 w-full" />
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {topCities?.map((city) => (
-                <CityCard key={city.slug} city={city} />
-              ))}
-            </div>
-          )}
         </section>
+      </div>
 
+      {/* Full-width slider outside container */}
+      <div className="city-slider py-2">
+        <div className="city-slider-track">
+          {[...topCities, ...topCities].map((city, i) => (
+            <div key={`${city.slug}-${i}`} className="city-slider-card">
+              <CityCard city={city} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
         {/* Trending Comparisons */}
         <section>
           <div className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-2">
@@ -509,8 +335,8 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-6">Trending City Comparisons</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {TRENDING_COMPARISONS.map((comp) => {
-              const cityAData = cities?.find((c) => c.slug === comp.slugA);
-              const cityBData = cities?.find((c) => c.slug === comp.slugB);
+              const cityAData = cities.find((c) => c.slug === comp.slugA);
+              const cityBData = cities.find((c) => c.slug === comp.slugB);
               return (
                 <Link
                   key={`${comp.slugA}-${comp.slugB}`}
@@ -620,19 +446,31 @@ export default function Home() {
               question:
                 "What is a cost of living index and how is it calculated?",
               answer:
-                "A cost of living index measures the relative price levels across different geographic areas. CostWise uses the Bureau of Economic Analysis Regional Price Parities (RPP), which compare price levels in each metro area to the national average of 100. An index of 110 means prices are 10% above the national average, while 90 means 10% below.",
+                "A cost of living index measures the relative price levels across different geographic areas. CostWise uses the Bureau of Economic Analysis Regional Price Parities (RPP), which compare price levels in each metro area to the national average of 100. An index of 110 means prices are 10% above the national average, while 90 means 10% below. This accounts for housing, groceries, utilities, transportation, and healthcare costs.",
             },
             {
               question:
-                "How much salary do I need to earn to maintain my lifestyle in a new city?",
+                "What is the cost of living in Arizona compared to the national average?",
               answer:
-                "To maintain the same standard of living, your salary should adjust proportionally to the cost of living difference. For example, if you earn $100,000 in a city with an index of 100 and move to a city with an index of 120, you'd need roughly $120,000. Our salary calculator accounts for housing costs, taxes, groceries, utilities, and transportation to give you a precise figure.",
+                "The cost of living in Arizona varies by city. Phoenix has a cost index close to the national average (around 100), making it relatively affordable compared to coastal cities. Tucson is even more affordable. Average cost of living in Arizona for a single person ranges from $2,500–$3,500/month depending on the city, which is below the US average.",
+            },
+            {
+              question:
+                "How much salary do I need to maintain my lifestyle in a new city?",
+              answer:
+                "Your salary should adjust proportionally to the cost of living difference. For example, if you earn $100,000 in a city with an index of 100 and move to a city with an index of 120, you'd need roughly $120,000. Our salary calculator accounts for housing costs, state taxes, groceries, utilities, and transportation to give you a precise figure — helpful when comparing wages vs cost of living.",
             },
             {
               question:
                 "What are the cheapest major cities to live in the United States?",
               answer:
-                "Based on our data, the most affordable major US cities include Oklahoma City, Memphis, Wichita, El Paso, and Indianapolis. These cities have cost of living indices 10-15% below the national average, with particularly low housing costs. Several also benefit from no state income tax.",
+                "Based on our data, the most affordable major US cities include Oklahoma City, Memphis, Wichita, El Paso, and Indianapolis. These cities have cost of living indices 10–15% below the national average, with particularly low housing costs. Several also benefit from no state income tax, making them the cheapest cities to live in America.",
+            },
+            {
+              question:
+                "How does the cost of living in Las Vegas compare to other US cities?",
+              answer:
+                "The cost of living in Las Vegas is close to the national average, with a cost index around 100. Average cost of living in Las Vegas runs roughly $2,800–$3,500/month for a single person. Housing is more affordable than coastal California cities, and Nevada has no state income tax, making it an attractive option for relocators from high-tax states.",
             },
             {
               question:
@@ -641,36 +479,49 @@ export default function Home() {
                 "State income tax can significantly impact your take-home pay. States like Texas, Florida, Tennessee, Nevada, and Washington have no state income tax, while California charges up to 13.3% and New York up to 10.9%. Moving from California to Texas on a $100,000 salary could save you over $10,000 per year in state taxes alone.",
             },
             {
-              question: "Where does CostWise get its data?",
+              question: "Where does CostWise get its cost of living data?",
               answer:
-                "CostWise aggregates data from four official US government sources: the Bureau of Economic Analysis (Regional Price Parities), US Census Bureau (American Community Survey 5-year estimates for income, rent, and home values), HUD Fair Market Rents, and the Bureau of Labor Statistics (unemployment rates and Consumer Price Index sub-components for groceries, utilities, and transportation).",
+                "CostWise aggregates data from four official US government sources: the Bureau of Economic Analysis (Regional Price Parities), US Census Bureau (American Community Survey 5-year estimates for income, rent, and home values), HUD Fair Market Rents, and the Bureau of Labor Statistics (unemployment rates and Consumer Price Index sub-components for groceries, utilities, and transportation). Data is updated annually.",
             },
             {
-              question: "How often is the cost of living data updated?",
+              question: "How do wages compare to the cost of living over time?",
               answer:
-                "Our data is updated annually when new government figures are released. Census ACS data is typically released each December, BEA price parities in late summer, HUD Fair Market Rents in fall, and BLS unemployment data monthly with annual averages published in January.",
+                "Wages vs cost of living has been a growing concern. While the national average household income has risen to around $75,000, housing costs have grown faster — especially in cities like San Francisco, New York, and the Bay Area. Our tools help you understand whether your salary keeps pace with local prices by comparing cost of living vs income in real time.",
             },
           ]}
         />
 
         {/* CTA Section */}
-        <section className="text-center py-8">
-          <h2 className="text-2xl font-bold mb-3">Ready to Compare?</h2>
-          <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-            Use our full salary calculator for a complete breakdown including
-            tax analysis, rent ratios, and lifestyle comfort scores.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/salary-calculator">
-              <Button size="lg" className="gap-2">
-                <Calculator className="w-4 h-4" /> Open Salary Calculator
-              </Button>
-            </Link>
-            <Link href="/cheapest-cities">
-              <Button size="lg" variant="outline" className="gap-2">
-                <MapPin className="w-4 h-4" /> Find Affordable Cities
-              </Button>
-            </Link>
+        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/90 via-primary to-primary/80 text-white text-center py-12 px-6">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0djZoLTZ2LTZoNnptMCAxMnY2aC02di02aDZ6bTEyLTEydjZoLTZ2LTZoNnptMCAxMnY2aC02di02aDZ6TTI0IDM0djZoLTZ2LTZoNnptMCAxMnY2aC02di02aDZ6bTEyLTI0djZoLTZ2LTZoNnptLTEyIDB2NmgtNnYtNmg2em0yNCAwaDB2NmgtNnYtNmg2em0tMzYgMHY2aC02di02aDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
+          <div className="relative">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              Ready to Compare Cities?
+            </h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">
+              Use our salary calculator for a full breakdown including tax
+              analysis, rent-to-income ratios, and affordability scores.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/salary-calculator">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="gap-2 font-semibold"
+                >
+                  <Calculator className="w-4 h-4" /> Open Salary Calculator
+                </Button>
+              </Link>
+              <Link href="/cheapest-cities">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="gap-2 border-white/30 text-white hover:bg-white/10"
+                >
+                  <MapPin className="w-4 h-4" /> Find Affordable Cities
+                </Button>
+              </Link>
+            </div>
           </div>
         </section>
       </div>

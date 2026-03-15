@@ -16,28 +16,45 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "CostWise – US Cost of Living Comparison Tool",
+    default:
+      "CostWise – Cost of Living Comparison Calculator for US Cities (2025)",
     template: "%s | CostWise",
   },
   description:
-    "Compare cost of living across 50+ US cities. Find salary equivalents, compare housing, taxes, and lifestyle — powered by Census Bureau, BEA, HUD, and BLS data.",
+    "Compare cost of living across 50+ US cities including Arizona, Las Vegas, Montana, and more. Calculate salary equivalents, compare housing costs, rent prices, state taxes, groceries, utilities — powered by Census Bureau, BEA, HUD, and BLS data. Find the cheapest and most affordable cities to live in America.",
   keywords: [
     "cost of living comparison",
     "cost of living calculator",
     "cost of living index by city",
+    "cost of living in arizona",
+    "cost of living in las vegas",
+    "montana cost of living",
+    "cost of living in vermont",
+    "rhode island cost of living",
+    "naples florida cost of living",
+    "bay area cost of living",
+    "bend oregon cost of living",
     "salary calculator by city",
     "salary adjustment calculator",
     "compare salaries between cities",
     "cheapest cities to live in US",
     "cheapest cities to live in America",
+    "most affordable cities USA 2025",
     "affordable cities USA",
     "rent comparison by city",
+    "average cost of living in arizona",
+    "average cost of living in las vegas",
     "cost of living index",
     "salary equivalent calculator",
+    "wages vs cost of living",
+    "cost of living vs income",
     "best cities to live in US",
-    "moving cost calculator",
     "housing affordability by city",
     "state income tax comparison",
+    "cost of living in california",
+    "cost of living in florida",
+    "cost of living in texas",
+    "cost of living in new york",
   ],
   authors: [{ name: "CostWise" }],
   openGraph: {
@@ -71,7 +88,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${openSans.variable} font-sans antialiased`}>
-        <ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <QueryProvider>
             <TooltipProvider>
               <div className="flex flex-col min-h-screen">

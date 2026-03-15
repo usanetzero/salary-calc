@@ -1,5 +1,5 @@
-import type { City } from "@/lib/types";
-import { CityModel } from "@/lib/city.model";
+import type { City, PayscaleCity, USState } from "@/lib/types";
+import { CityModel, PayscaleCityModel, StateModel } from "@/lib/city.model";
 import { connectMongoDB, isMongoConnected } from "@/lib/mongodb";
 
 function docToCity(doc: Record<string, unknown>): City {
@@ -19,6 +19,80 @@ function docToCity(doc: Record<string, unknown>): City {
     transportationIndex: doc.transportationIndex as number,
     healthcareIndex: doc.healthcareIndex as number,
     population: doc.population as number,
+    description: doc.description as string | undefined,
+    fmrRent1BR: doc.fmrRent1BR as number | undefined,
+    fmrRent2BR: doc.fmrRent2BR as number | undefined,
+    fmrRent3BR: doc.fmrRent3BR as number | undefined,
+    rentRPP: doc.rentRPP as number | undefined,
+    goodsRPP: doc.goodsRPP as number | undefined,
+    servicesRPP: doc.servicesRPP as number | undefined,
+    averageSalary: doc.averageSalary as number | undefined,
+  };
+}
+
+function docToPayscaleCity(doc: Record<string, unknown>): PayscaleCity {
+  const cat = doc.categoryComparisons as
+    | Record<string, string | null>
+    | undefined;
+  const housing = doc.housing as Record<string, string> | undefined;
+  const food = doc.foodGrocery as Record<string, string> | undefined;
+  const hc = doc.healthcare as Record<string, string> | undefined;
+  return {
+    name: doc.name as string,
+    slug: doc.slug as string,
+    stateName: doc.stateName as string,
+    stateSlug: doc.stateSlug as string,
+    url: doc.url as string | undefined,
+    overallVsNationalAvg: doc.overallVsNationalAvg as string | undefined,
+    categoryComparisons: cat
+      ? {
+          Housing: cat.Housing,
+          Utilities: cat.Utilities,
+          Groceries: cat.Groceries,
+          Transportation: cat.Transportation,
+        }
+      : undefined,
+    housing: housing
+      ? {
+          medianHomePrice: housing.medianHomePrice,
+          medianRent: housing.medianRent,
+          energyBill: housing.energyBill,
+          phoneBill: housing.phoneBill,
+          gas: housing.gas,
+        }
+      : undefined,
+    foodGrocery: food
+      ? {
+          loafOfBread: food.loafOfBread,
+          gallonOfMilk: food.gallonOfMilk,
+          cartonOfEggs: food.cartonOfEggs,
+          bunchOfBananas: food.bunchOfBananas,
+          hamburger: food.hamburger,
+        }
+      : undefined,
+    healthcare: hc
+      ? {
+          doctorsVisit: hc.doctorsVisit,
+          dentistVisit: hc.dentistVisit,
+          optometristVisit: hc.optometristVisit,
+          rxDrug: hc.rxDrug,
+          veterinaryVisit: hc.veterinaryVisit,
+        }
+      : undefined,
+  };
+}
+
+function docToState(doc: Record<string, unknown>): USState {
+  return {
+    slug: doc.slug as string,
+    name: doc.name as string,
+    stateCode: doc.stateCode as string,
+    totalCities: doc.totalCities as number,
+    avgCostIndex: doc.avgCostIndex as number | undefined,
+    avgTaxRate: doc.avgTaxRate as number | undefined,
+    avgMedianRent: doc.avgMedianRent as number | undefined,
+    avgMedianIncome: doc.avgMedianIncome as number | undefined,
+    avgMedianHomeValue: doc.avgMedianHomeValue as number | undefined,
     description: doc.description as string | undefined,
   };
 }
@@ -92,42 +166,6 @@ export async function searchCities(query: string): Promise<City[]> {
   return docs.map(docToCity);
 }
 
-const STATES: Record<
-  string,
-  { name: string; avgTax: number; avgCostIndex: number }
-> = {
-  NY: { name: "New York", avgTax: 6.85, avgCostIndex: 132.5 },
-  CA: { name: "California", avgTax: 9.3, avgCostIndex: 149.8 },
-  WA: { name: "Washington", avgTax: 0.0, avgCostIndex: 132.0 },
-  MA: { name: "Massachusetts", avgTax: 5.0, avgCostIndex: 138.5 },
-  IL: { name: "Illinois", avgTax: 4.95, avgCostIndex: 104.2 },
-  TX: { name: "Texas", avgTax: 0.0, avgCostIndex: 96.1 },
-  CO: { name: "Colorado", avgTax: 4.55, avgCostIndex: 118.0 },
-  FL: { name: "Florida", avgTax: 0.0, avgCostIndex: 103.5 },
-  TN: { name: "Tennessee", avgTax: 0.0, avgCostIndex: 95.8 },
-  GA: { name: "Georgia", avgTax: 5.75, avgCostIndex: 100.8 },
-  AZ: { name: "Arizona", avgTax: 2.5, avgCostIndex: 95.2 },
-  MN: { name: "Minnesota", avgTax: 9.85, avgCostIndex: 104.2 },
-  OR: { name: "Oregon", avgTax: 9.9, avgCostIndex: 124.8 },
-  NC: { name: "North Carolina", avgTax: 4.75, avgCostIndex: 97.2 },
-  MD: { name: "Maryland", avgTax: 5.75, avgCostIndex: 112.5 },
-  WI: { name: "Wisconsin", avgTax: 7.65, avgCostIndex: 88.5 },
-  PA: { name: "Pennsylvania", avgTax: 3.07, avgCostIndex: 92.4 },
-  OH: { name: "Ohio", avgTax: 4.997, avgCostIndex: 86.5 },
-  IN: { name: "Indiana", avgTax: 3.23, avgCostIndex: 84.5 },
-  MO: { name: "Missouri", avgTax: 5.4, avgCostIndex: 84.8 },
-  NE: { name: "Nebraska", avgTax: 6.84, avgCostIndex: 86.5 },
-  NV: { name: "Nevada", avgTax: 0.0, avgCostIndex: 98.5 },
-  VA: { name: "Virginia", avgTax: 5.75, avgCostIndex: 104.2 },
-  KY: { name: "Kentucky", avgTax: 5.0, avgCostIndex: 86.5 },
-  MI: { name: "Michigan", avgTax: 4.25, avgCostIndex: 82.5 },
-  LA: { name: "Louisiana", avgTax: 6.0, avgCostIndex: 92.8 },
-  NM: { name: "New Mexico", avgTax: 5.9, avgCostIndex: 90.5 },
-  KS: { name: "Kansas", avgTax: 5.7, avgCostIndex: 82.8 },
-  OK: { name: "Oklahoma", avgTax: 4.75, avgCostIndex: 83.5 },
-  DC: { name: "Washington DC", avgTax: 8.95, avgCostIndex: 155.2 },
-};
-
 export async function getComparisonData(slugA: string, slugB: string) {
   const [cityA, cityB] = await Promise.all([
     getCityBySlug(slugA),
@@ -165,6 +203,19 @@ export async function getStateInfo(
   stateCode: string,
 ): Promise<{ name: string; avgTax: number; avgCostIndex: number } | undefined> {
   await ensureConnection();
+  // Try the State collection first
+  const stateDoc = await StateModel.findOne({
+    stateCode: stateCode.toUpperCase(),
+  }).lean();
+  if (stateDoc) {
+    const s = stateDoc as unknown as Record<string, unknown>;
+    return {
+      name: s.name as string,
+      avgTax: (s.avgTaxRate as number) || 0,
+      avgCostIndex: (s.avgCostIndex as number) || 100,
+    };
+  }
+  // Fallback: calculate from cities
   const docs = await CityModel.find({
     stateCode: stateCode.toUpperCase(),
   }).lean();
@@ -173,10 +224,82 @@ export async function getStateInfo(
   const avgTax = cities.reduce((s, c) => s + c.taxRate, 0) / cities.length;
   const avgCostIndex =
     cities.reduce((s, c) => s + c.costIndex, 0) / cities.length;
-  const stateInfo = STATES[stateCode.toUpperCase()];
   return {
-    name: stateInfo?.name ?? cities[0].state,
+    name: cities[0].state,
     avgTax: Math.round(avgTax * 100) / 100,
     avgCostIndex: Math.round(avgCostIndex * 10) / 10,
   };
+}
+
+/* ── State Functions ──────────────────────────────────── */
+
+export async function getAllStates(): Promise<USState[]> {
+  await ensureConnection();
+  const docs = await StateModel.find({}).sort({ name: 1 }).lean();
+  return docs.map((d) => docToState(d as unknown as Record<string, unknown>));
+}
+
+export async function getStateBySlug(
+  slug: string,
+): Promise<USState | undefined> {
+  await ensureConnection();
+  const doc = await StateModel.findOne({ slug }).lean();
+  return doc
+    ? docToState(doc as unknown as Record<string, unknown>)
+    : undefined;
+}
+
+export async function getStateByCode(
+  code: string,
+): Promise<USState | undefined> {
+  await ensureConnection();
+  const doc = await StateModel.findOne({
+    stateCode: code.toUpperCase(),
+  }).lean();
+  return doc
+    ? docToState(doc as unknown as Record<string, unknown>)
+    : undefined;
+}
+
+/* ── Payscale City Functions ──────────────────────────── */
+
+export async function getPayscaleCitiesByState(
+  stateSlug: string,
+): Promise<PayscaleCity[]> {
+  await ensureConnection();
+  const docs = await PayscaleCityModel.find({ stateSlug })
+    .sort({ name: 1 })
+    .lean();
+  return docs.map((d) =>
+    docToPayscaleCity(d as unknown as Record<string, unknown>),
+  );
+}
+
+export async function getPayscaleCityBySlug(
+  stateSlug: string,
+  citySlug: string,
+): Promise<PayscaleCity | undefined> {
+  await ensureConnection();
+  const doc = await PayscaleCityModel.findOne({
+    stateSlug,
+    slug: citySlug,
+  }).lean();
+  return doc
+    ? docToPayscaleCity(doc as unknown as Record<string, unknown>)
+    : undefined;
+}
+
+export async function searchPayscaleCities(
+  query: string,
+): Promise<PayscaleCity[]> {
+  await ensureConnection();
+  const regex = new RegExp(query, "i");
+  const docs = await PayscaleCityModel.find({
+    $or: [{ name: regex }, { stateName: regex }],
+  })
+    .limit(20)
+    .lean();
+  return docs.map((d) =>
+    docToPayscaleCity(d as unknown as Record<string, unknown>),
+  );
 }

@@ -54,6 +54,7 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/salary-calculator", label: "Salary Calculator" },
     { href: "/cheapest-cities", label: "Cheapest Cities" },
+    { href: "/states", label: "States" },
   ];
 
   return (

@@ -94,6 +94,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/states">
+                  <span className="text-sm text-muted-foreground cursor-pointer hover-elevate rounded-sm">
+                    Cost of Living by State
+                  </span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/cheapest-cities?state=TX">
                   <span className="text-sm text-muted-foreground cursor-pointer hover-elevate rounded-sm">
                     Cheapest Cities in Texas

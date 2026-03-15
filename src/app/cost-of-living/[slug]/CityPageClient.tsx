@@ -24,13 +24,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { CitySelect } from "@/components/CitySelect";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   RadarChart,
@@ -484,20 +478,14 @@ export default function CityPageClient({
             <label className="text-sm font-medium mb-2 block">
               Compare to City
             </label>
-            <Select value={compareSlug} onValueChange={setCompareSlug}>
-              <SelectTrigger>
-                <SelectValue placeholder="Select a city to compare..." />
-              </SelectTrigger>
-              <SelectContent>
-                {allCities
-                  ?.filter((c) => c.slug !== slug)
-                  .map((c) => (
-                    <SelectItem key={c.slug} value={c.slug}>
-                      {c.name}, {c.stateCode}
-                    </SelectItem>
-                  ))}
-              </SelectContent>
-            </Select>
+            <CitySelect
+              cities={allCities || []}
+              value={compareSlug}
+              onChange={setCompareSlug}
+              placeholder="Select a city to compare..."
+              excludeSlug={slug}
+              data-testid="compare-city-select"
+            />
           </div>
 
           {adjustedSalary !== null && compareCityData && (

@@ -18,13 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { CitySelect } from "@/components/CitySelect";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { FAQSection } from "@/components/FAQSection";
@@ -241,18 +235,12 @@ export default function SalaryCalculatorClient({
               {isLoading ? (
                 <Skeleton className="h-9 w-full" />
               ) : (
-                <Select value={fromCity} onValueChange={setFromCity}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {cities?.map((c) => (
-                      <SelectItem key={c.slug} value={c.slug}>
-                        {c.name}, {c.stateCode}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <CitySelect
+                  cities={cities || []}
+                  value={fromCity}
+                  onChange={setFromCity}
+                  data-testid="from-city-select"
+                />
               )}
             </div>
             <div>
@@ -262,18 +250,12 @@ export default function SalaryCalculatorClient({
               {isLoading ? (
                 <Skeleton className="h-9 w-full" />
               ) : (
-                <Select value={toCity} onValueChange={setToCity}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {cities?.map((c) => (
-                      <SelectItem key={c.slug} value={c.slug}>
-                        {c.name}, {c.stateCode}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <CitySelect
+                  cities={cities || []}
+                  value={toCity}
+                  onChange={setToCity}
+                  data-testid="to-city-select"
+                />
               )}
             </div>
           </div>

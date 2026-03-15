@@ -17,6 +17,70 @@ export const citySchema = z.object({
   healthcareIndex: z.number(),
   population: z.number(),
   description: z.string().optional(),
+  fmrRent1BR: z.number().optional(),
+  fmrRent2BR: z.number().optional(),
+  fmrRent3BR: z.number().optional(),
+  rentRPP: z.number().optional(),
+  goodsRPP: z.number().optional(),
+  servicesRPP: z.number().optional(),
+  averageSalary: z.number().optional(),
+});
+
+export const payscaleCitySchema = z.object({
+  name: z.string(),
+  slug: z.string(),
+  stateName: z.string(),
+  stateSlug: z.string(),
+  url: z.string().optional(),
+  overallVsNationalAvg: z.string().optional(),
+  categoryComparisons: z
+    .object({
+      Housing: z.string().nullable().optional(),
+      Utilities: z.string().nullable().optional(),
+      Groceries: z.string().nullable().optional(),
+      Transportation: z.string().nullable().optional(),
+    })
+    .optional(),
+  housing: z
+    .object({
+      medianHomePrice: z.string().optional(),
+      medianRent: z.string().optional(),
+      energyBill: z.string().optional(),
+      phoneBill: z.string().optional(),
+      gas: z.string().optional(),
+    })
+    .optional(),
+  foodGrocery: z
+    .object({
+      loafOfBread: z.string().optional(),
+      gallonOfMilk: z.string().optional(),
+      cartonOfEggs: z.string().optional(),
+      bunchOfBananas: z.string().optional(),
+      hamburger: z.string().optional(),
+    })
+    .optional(),
+  healthcare: z
+    .object({
+      doctorsVisit: z.string().optional(),
+      dentistVisit: z.string().optional(),
+      optometristVisit: z.string().optional(),
+      rxDrug: z.string().optional(),
+      veterinaryVisit: z.string().optional(),
+    })
+    .optional(),
+});
+
+export const stateSchema = z.object({
+  slug: z.string(),
+  name: z.string(),
+  stateCode: z.string(),
+  totalCities: z.number(),
+  avgCostIndex: z.number().optional(),
+  avgTaxRate: z.number().optional(),
+  avgMedianRent: z.number().optional(),
+  avgMedianIncome: z.number().optional(),
+  avgMedianHomeValue: z.number().optional(),
+  description: z.string().optional(),
 });
 
 export const comparisonSchema = z.object({
@@ -35,4 +99,6 @@ export const comparisonSchema = z.object({
 });
 
 export type City = z.infer<typeof citySchema>;
+export type PayscaleCity = z.infer<typeof payscaleCitySchema>;
+export type USState = z.infer<typeof stateSchema>;
 export type Comparison = z.infer<typeof comparisonSchema>;

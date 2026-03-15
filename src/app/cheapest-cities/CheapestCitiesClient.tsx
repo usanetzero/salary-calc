@@ -9,13 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { SimpleSelect } from "@/components/CitySelect";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { City } from "@/lib/types";
 import { FAQSection } from "@/components/FAQSection";
@@ -158,44 +152,35 @@ export default function CheapestCitiesClient({
               <label className="text-xs font-medium text-muted-foreground mb-1.5 block">
                 Filter by State
               </label>
-              <Select value={selectedState} onValueChange={setSelectedState}>
-                <SelectTrigger data-testid="select-state-filter">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {US_STATES.map((state) => (
-                    <SelectItem key={state.code} value={state.code}>
-                      {state.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <SimpleSelect
+                options={US_STATES.map((s) => ({
+                  value: s.code,
+                  label: s.name,
+                }))}
+                value={selectedState}
+                onChange={setSelectedState}
+                data-testid="select-state-filter"
+              />
             </div>
 
             <div className="flex-1 min-w-[160px]">
               <label className="text-xs font-medium text-muted-foreground mb-1.5 block">
                 Sort By
               </label>
-              <Select
+              <SimpleSelect
+                options={[
+                  { value: "costIndex", label: "Cost Index (Low to High)" },
+                  { value: "medianRent", label: "Median Rent (Low to High)" },
+                  {
+                    value: "medianIncome",
+                    label: "Median Income (High to Low)",
+                  },
+                  { value: "name", label: "City Name (A-Z)" },
+                ]}
                 value={sortBy}
-                onValueChange={(v) => setSortBy(v as SortBy)}
-              >
-                <SelectTrigger data-testid="select-sort-by">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="costIndex">
-                    Cost Index (Low to High)
-                  </SelectItem>
-                  <SelectItem value="medianRent">
-                    Median Rent (Low to High)
-                  </SelectItem>
-                  <SelectItem value="medianIncome">
-                    Median Income (High to Low)
-                  </SelectItem>
-                  <SelectItem value="name">City Name (A-Z)</SelectItem>
-                </SelectContent>
-              </Select>
+                onChange={(v) => setSortBy(v as SortBy)}
+                data-testid="select-sort-by"
+              />
             </div>
 
             <div className="flex-1 min-w-[180px]">

@@ -1,9 +1,33 @@
 import mongoose from "mongoose";
 
-let isConnected = false;
+/**
+ * Global cache that survives hot-module-reload in dev and persists across
+ * every request in production. Guarantees a SINGLE connection for the
+ * entire lifetime of the Node.js process — no reconnects per page visit.
+ */
+interface MongooseCache {
+  conn: typeof mongoose | null;
+  promise: Promise<typeof mongoose> | null;
+}
 
-export async function connectMongoDB(): Promise<void> {
-  if (isConnected && mongoose.connection.readyState === 1) return;
+/* eslint-disable no-var */
+declare global {
+  var __mongooseCache: MongooseCache | undefined;
+}
+
+const cached: MongooseCache = global.__mongooseCache ?? {
+  conn: null,
+  promise: null,
+};
+if (!global.__mongooseCache) {
+  global.__mongooseCache = cached;
+}
+
+export async function connectMongoDB(): Promise<typeof mongoose> {
+  // Already connected → return instantly (no DB call, no log)
+  if (cached.conn && mongoose.connection.readyState === 1) {
+    return cached.conn;
+  }
 
   const uri = process.env.MONGODB_URI;
   if (!uri) {
@@ -12,31 +36,35 @@ export async function connectMongoDB(): Promise<void> {
     );
   }
 
-  try {
-    await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 10000,
-      socketTimeoutMS: 45000,
-    });
-    isConnected = true;
-    console.log("[mongodb] Connected to MongoDB Atlas");
-  } catch (error) {
-    console.error("[mongodb] Failed to connect:", error);
-    throw error;
+  // If a connect attempt is already in-flight, await that same promise
+  // (prevents duplicate connections from concurrent requests)
+  if (!cached.promise) {
+    cached.promise = mongoose
+      .connect(uri, {
+        serverSelectionTimeoutMS: 10000,
+        socketTimeoutMS: 45000,
+        maxPoolSize: 10,
+        minPoolSize: 2,
+        maxIdleTimeMS: 60000, // keep idle connections longer
+        heartbeatFrequencyMS: 10000,
+      })
+      .then((m) => {
+        console.log("[mongodb] Connected to MongoDB Atlas (single connection)");
+        return m;
+      })
+      .catch((err) => {
+        // Reset promise so the next call retries
+        cached.promise = null;
+        throw err;
+      });
   }
 
-  mongoose.connection.on("disconnected", () => {
-    isConnected = false;
-    console.warn("[mongodb] Disconnected from MongoDB");
-  });
-
-  mongoose.connection.on("reconnected", () => {
-    isConnected = true;
-    console.log("[mongodb] Reconnected to MongoDB");
-  });
+  cached.conn = await cached.promise;
+  return cached.conn;
 }
 
 export function isMongoConnected(): boolean {
-  return isConnected && mongoose.connection.readyState === 1;
+  return cached.conn !== null && mongoose.connection.readyState === 1;
 }
 
 export default mongoose;

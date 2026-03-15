@@ -25,13 +25,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { CitySelect } from "@/components/CitySelect";
+import { FAQSection } from "@/components/FAQSection";
 import {
   BarChart,
   Bar,
@@ -294,36 +289,26 @@ export default function ComparePageClient({
           <div className="flex flex-wrap items-end gap-3">
             <div className="flex-1 min-w-[180px]">
               <label className="text-sm font-medium mb-1.5 block">City A</label>
-              <Select value={customA} onValueChange={setCustomA}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select city..." />
-                </SelectTrigger>
-                <SelectContent>
-                  {allCities?.map((c) => (
-                    <SelectItem key={c.slug} value={c.slug}>
-                      {c.name}, {c.stateCode}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <CitySelect
+                cities={allCities || []}
+                value={customA}
+                onChange={setCustomA}
+                placeholder="Select city..."
+                data-testid="compare-city-a"
+              />
             </div>
             <div className="flex items-center pb-0.5">
               <span className="text-muted-foreground font-medium px-2">vs</span>
             </div>
             <div className="flex-1 min-w-[180px]">
               <label className="text-sm font-medium mb-1.5 block">City B</label>
-              <Select value={customB} onValueChange={setCustomB}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select city..." />
-                </SelectTrigger>
-                <SelectContent>
-                  {allCities?.map((c) => (
-                    <SelectItem key={c.slug} value={c.slug}>
-                      {c.name}, {c.stateCode}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <CitySelect
+                cities={allCities || []}
+                value={customB}
+                onChange={setCustomB}
+                placeholder="Select city..."
+                data-testid="compare-city-b"
+              />
             </div>
             <Button
               onClick={handleCompare}
@@ -675,28 +660,39 @@ export default function ComparePageClient({
       </div>
 
       {/* FAQ */}
-      <section>
-        <h2 className="text-xl font-bold mb-4">Frequently Asked Questions</h2>
-        <div className="space-y-3">
-          {[
-            {
-              q: `Is ${cityA.name} more expensive than ${cityB.name}?`,
-              a: `${cityA.name} has a cost of living index of ${cityA.costIndex.toFixed(1)}, while ${cityB.name} scores ${cityB.costIndex.toFixed(1)}. ${cityA.costIndex > cityB.costIndex ? `${cityA.name} is ${differences.costIndex.toFixed(1)}% more expensive.` : `${cityB.name} is ${Math.abs(differences.costIndex).toFixed(1)}% more expensive.`}`,
-            },
-            {
-              q: `How does the rent compare between ${cityA.name} and ${cityB.name}?`,
-              a: `Median 2-bedroom rent in ${cityA.name} is ${formatCurrency(cityA.medianRent)}/month compared to ${formatCurrency(cityB.medianRent)}/month in ${cityB.name} — a difference of ${Math.abs(differences.rent).toFixed(0)}%.`,
-            },
-          ].map((faq) => (
-            <Card key={faq.q}>
-              <CardContent className="p-4">
-                <h3 className="font-semibold text-sm mb-2">{faq.q}</h3>
-                <p className="text-sm text-muted-foreground">{faq.a}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+      <FAQSection
+        title={`${cityA.name} vs ${cityB.name} – FAQ`}
+        subtitle={`Common questions about comparing cost of living between ${cityA.name} and ${cityB.name}.`}
+        items={[
+          {
+            question: `Is ${cityA.name} more expensive than ${cityB.name}?`,
+            answer: `${cityA.name} has a cost of living index of ${cityA.costIndex.toFixed(1)}, while ${cityB.name} scores ${cityB.costIndex.toFixed(1)}. ${cityA.costIndex > cityB.costIndex ? `${cityA.name} is approximately ${differences.costIndex.toFixed(1)}% more expensive overall.` : `${cityB.name} is approximately ${Math.abs(differences.costIndex).toFixed(1)}% more expensive overall.`} This comparison accounts for housing, groceries, utilities, transportation, healthcare, and taxes.`,
+          },
+          {
+            question: `How does rent compare between ${cityA.name} and ${cityB.name}?`,
+            answer: `Median 2-bedroom rent in ${cityA.name} is ${formatCurrency(cityA.medianRent)}/month compared to ${formatCurrency(cityB.medianRent)}/month in ${cityB.name} — a difference of ${Math.abs(differences.rent).toFixed(0)}%. Rent is typically the largest monthly expense, so this significantly impacts overall affordability.`,
+          },
+          {
+            question: `What salary do I need in ${cityB.name} to match my ${cityA.name} income?`,
+            answer: `Due to cost of living differences, you would need approximately ${(comparison.salaryMultiplier * 100).toFixed(0)}% of your ${cityA.name} salary to maintain the same standard of living in ${cityB.name}. For example, a $75,000 salary in ${cityA.name} would need to be about ${formatCurrency(75000 * comparison.salaryMultiplier)} in ${cityB.name}. Use the salary slider above to calculate your specific equivalent.`,
+          },
+          {
+            question: "How is the cost of living index calculated?",
+            answer:
+              "The cost of living index is calculated using data from the Bureau of Economic Analysis (Regional Price Parities), US Census Bureau (median incomes and home values), HUD (Fair Market Rents), and Bureau of Labor Statistics (consumer price data). A score of 100 represents the national average. Scores above 100 indicate higher-than-average costs, while scores below 100 are more affordable.",
+          },
+          {
+            question: `Which city has better job opportunities — ${cityA.name} or ${cityB.name}?`,
+            answer: `${cityA.name} has a median household income of ${formatCurrency(cityA.medianIncome)} with an unemployment rate of ${cityA.unemploymentRate}%. ${cityB.name} has a median household income of ${formatCurrency(cityB.medianIncome)} with an unemployment rate of ${cityB.unemploymentRate}%. While income is higher in ${cityA.medianIncome > cityB.medianIncome ? cityA.name : cityB.name}, remember to factor in cost of living when comparing real purchasing power.`,
+          },
+          {
+            question:
+              "What factors should I consider when relocating between cities?",
+            answer:
+              "Beyond cost of living, consider: (1) state income tax differences — some states have no income tax; (2) housing market trends and whether to rent or buy; (3) job market strength in your industry; (4) healthcare costs and access; (5) climate and lifestyle preferences; (6) commute times and transportation options; and (7) proximity to family. Our comparison tool covers the financial factors, but quality of life matters too.",
+          },
+        ]}
+      />
     </div>
   );
 }

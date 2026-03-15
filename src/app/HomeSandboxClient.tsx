@@ -5,13 +5,7 @@ import Link from "next/link";
 import { Calculator, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { CitySelect } from "@/components/CitySelect";
 import { Slider } from "@/components/ui/slider";
 import type { City } from "@/lib/types";
 import { formatCurrency } from "@/lib/utils";
@@ -70,33 +64,21 @@ export default function HomeSandboxClient({ cities }: { cities: City[] }) {
             <label className="text-sm font-medium mb-1.5 block">
               From City
             </label>
-            <Select value={fromCity} onValueChange={setFromCity}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {cities.map((c) => (
-                  <SelectItem key={c.slug} value={c.slug}>
-                    {c.name}, {c.stateCode}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <CitySelect
+              cities={cities}
+              value={fromCity}
+              onChange={setFromCity}
+              data-testid="from-city-select"
+            />
           </div>
           <div>
             <label className="text-sm font-medium mb-1.5 block">To City</label>
-            <Select value={toCity} onValueChange={setToCity}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {cities.map((c) => (
-                  <SelectItem key={c.slug} value={c.slug}>
-                    {c.name}, {c.stateCode}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <CitySelect
+              cities={cities}
+              value={toCity}
+              onChange={setToCity}
+              data-testid="to-city-select"
+            />
           </div>
         </div>
 

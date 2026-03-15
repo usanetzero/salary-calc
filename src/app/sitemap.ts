@@ -1,9 +1,13 @@
 import { MetadataRoute } from "next";
-import { getAllCities } from "@/lib/storage";
+import {
+  getAllCities,
+  getAllStates,
+  getPayscaleCitiesByState,
+} from "@/lib/storage";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://costwise.app";
+  "https://costwise.usa-net-zero.com";
 
 // Top city pairs for cost-of-living comparisons in sitemap
 const TOP_COMPARE_PAIRS = [
@@ -83,7 +87,10 @@ const TOP_COMPARE_PAIRS = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const cities = await getAllCities().catch(() => []);
+  const [cities, states] = await Promise.all([
+    getAllCities().catch(() => []),
+    getAllStates().catch(() => []),
+  ]);
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -101,6 +108,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${SITE_URL}/cheapest-cities`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/states`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
@@ -123,5 +136,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
-  return [...staticPages, ...cityPages, ...comparePages];
+  // State pages
+  const statePages: MetadataRoute.Sitemap = states.map((st) => ({
+    url: `${SITE_URL}/states/${st.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // Payscale city pages — fetch all payscale cities for all states
+  const payscaleCityPages: MetadataRoute.Sitemap = [];
+  for (const st of states) {
+    try {
+      const pCities = await getPayscaleCitiesByState(st.slug);
+      for (const pc of pCities) {
+        payscaleCityPages.push({
+          url: `${SITE_URL}/states/${st.slug}/${pc.slug}`,
+          lastModified: now,
+          changeFrequency: "monthly" as const,
+          priority: 0.5,
+        });
+      }
+    } catch {
+      // skip
+    }
+  }
+
+  return [
+    ...staticPages,
+    ...cityPages,
+    ...comparePages,
+    ...statePages,
+    ...payscaleCityPages,
+  ];
 }

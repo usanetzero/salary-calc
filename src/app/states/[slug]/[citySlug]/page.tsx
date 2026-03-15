@@ -10,6 +10,7 @@ import {
   Stethoscope,
   DollarSign,
   Building2,
+  MapPin,
   TrendingDown,
   TrendingUp,
   Eye,
@@ -27,6 +28,8 @@ import {
 import type { Metadata } from "next";
 
 export const revalidate = 3600;
+
+const SITE_URL = "https://costwise.usa-net-zero.com";
 
 interface Props {
   params: Promise<{ slug: string; citySlug: string }>;
@@ -85,6 +88,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `Cost of Living in ${city.name}, ${city.stateName} | CostWise`,
       description: `${city.name} is ${overall} vs national average. ${rent ? `Median rent: ${rent}. ` : ""}Explore detailed breakdowns of housing, food, healthcare, and more.`,
+      url: `${SITE_URL}/states/${slug}/${citySlug}`,
+    },
+    alternates: {
+      canonical: `${SITE_URL}/states/${slug}/${citySlug}`,
     },
   };
 }
@@ -194,332 +201,429 @@ export default async function PayscaleCityPage({ params }: Props) {
     },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `Cost of Living in ${city.name}, ${city.stateName} (2026)`,
+    description: `Detailed cost of living data for ${city.name}, ${city.stateName}. ${overall ? `Overall: ${overall} vs national average.` : ""} ${h?.medianRent ? `Median rent: ${h.medianRent}.` : ""}`,
+    url: `${SITE_URL}/states/${slug}/${citySlug}`,
+    publisher: { "@type": "Organization", name: "CostWise", url: SITE_URL },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "States",
+          item: `${SITE_URL}/states`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: city.stateName,
+          item: `${SITE_URL}/states/${slug}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: city.name,
+          item: `${SITE_URL}/states/${slug}/${citySlug}`,
+        },
+      ],
+    },
+  };
+
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-primary/90 via-primary to-primary/80 text-white py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge className="mb-3 bg-white/20 text-white border-white/30">
-            {city.stateName} &bull; 2026 Data
-          </Badge>
-          <h1 className="text-3xl md:text-5xl font-bold mb-2">
-            Cost of Living in {city.name}, {city.stateName}
-          </h1>
-          {overall && (
-            <p className="text-lg text-white/90 flex items-center gap-2 mb-2">
-              Overall cost of living:{" "}
-              <span className="font-bold text-xl">{overall}</span> vs national
-              average
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen">
+        {/* Hero */}
+        <section className="bg-gradient-to-br from-primary/90 via-primary to-primary/80 text-white py-14">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Badge className="mb-3 bg-white/20 text-white border-white/30">
+              {city.stateName} &bull; 2026 Data
+            </Badge>
+            <h1 className="text-3xl md:text-5xl font-bold mb-2">
+              Cost of Living in {city.name}, {city.stateName}
+            </h1>
+            {overall && (
+              <p className="text-lg text-white/90 flex items-center gap-2 mb-2">
+                Overall cost of living:{" "}
+                <span className="font-bold text-xl">{overall}</span> vs national
+                average
+              </p>
+            )}
+            <p className="text-white/70 text-sm">
+              Detailed housing, grocery, healthcare, and utility cost data for{" "}
+              {city.name}.
             </p>
+          </div>
+        </section>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
+            <Link href="/">
+              <span className="cursor-pointer hover-elevate rounded-sm">
+                Home
+              </span>
+            </Link>
+            <ChevronRight className="w-3 h-3" />
+            <Link href="/states">
+              <span className="cursor-pointer hover-elevate rounded-sm">
+                States
+              </span>
+            </Link>
+            <ChevronRight className="w-3 h-3" />
+            <Link href={`/states/${slug}`}>
+              <span className="cursor-pointer hover-elevate rounded-sm">
+                {city.stateName}
+              </span>
+            </Link>
+            <ChevronRight className="w-3 h-3" />
+            <span className="text-foreground font-medium">{city.name}</span>
+          </nav>
+
+          {/* Category Comparison Badges */}
+          {cc && (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {(
+                ["Housing", "Utilities", "Groceries", "Transportation"] as const
+              ).map(
+                (key) =>
+                  cc[key] !== undefined && (
+                    <Card key={key}>
+                      <CardContent className="p-4 text-center">
+                        <div className="text-xs text-muted-foreground mb-2">
+                          {key}
+                        </div>
+                        {pctBadge(cc[key], "lg")}
+                      </CardContent>
+                    </Card>
+                  ),
+              )}
+            </div>
           )}
-          <p className="text-white/70 text-sm">
-            Detailed housing, grocery, healthcare, and utility cost data for{" "}
-            {city.name}.
-          </p>
-        </div>
-      </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
-        {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
-          <Link href="/">
-            <span className="cursor-pointer hover-elevate rounded-sm">
-              Home
-            </span>
-          </Link>
-          <ChevronRight className="w-3 h-3" />
-          <Link href="/states">
-            <span className="cursor-pointer hover-elevate rounded-sm">
-              States
-            </span>
-          </Link>
-          <ChevronRight className="w-3 h-3" />
-          <Link href={`/states/${slug}`}>
-            <span className="cursor-pointer hover-elevate rounded-sm">
-              {city.stateName}
-            </span>
-          </Link>
-          <ChevronRight className="w-3 h-3" />
-          <span className="text-foreground font-medium">{city.name}</span>
-        </nav>
+          {/* Data Sections */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Housing */}
+            {h && (
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Home className="w-5 h-5 text-primary" />
+                    Housing &amp; Utilities
+                  </CardTitle>
+                  {cc?.Housing && (
+                    <div className="mt-1">{pctBadge(cc.Housing)}</div>
+                  )}
+                </CardHeader>
+                <CardContent>
+                  <DataRow
+                    icon={Building2}
+                    label="Median Home Price"
+                    value={h.medianHomePrice}
+                  />
+                  <DataRow
+                    icon={DollarSign}
+                    label="Median Rent"
+                    value={h.medianRent}
+                  />
+                  <DataRow
+                    icon={Zap}
+                    label="Energy Bill"
+                    value={h.energyBill}
+                  />
+                  <DataRow
+                    icon={Phone}
+                    label="Phone Bill"
+                    value={h.phoneBill}
+                  />
+                  <DataRow icon={Fuel} label="Gas (per gallon)" value={h.gas} />
+                </CardContent>
+              </Card>
+            )}
 
-        {/* Category Comparison Badges */}
-        {cc && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {(
-              ["Housing", "Utilities", "Groceries", "Transportation"] as const
-            ).map(
-              (key) =>
-                cc[key] !== undefined && (
-                  <Card key={key}>
-                    <CardContent className="p-4 text-center">
-                      <div className="text-xs text-muted-foreground mb-2">
-                        {key}
-                      </div>
-                      {pctBadge(cc[key], "lg")}
-                    </CardContent>
-                  </Card>
-                ),
+            {/* Food & Grocery */}
+            {f && (
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <ShoppingCart className="w-5 h-5 text-primary" />
+                    Food &amp; Grocery
+                  </CardTitle>
+                  {cc?.Groceries && (
+                    <div className="mt-1">{pctBadge(cc.Groceries)}</div>
+                  )}
+                </CardHeader>
+                <CardContent>
+                  <DataRow
+                    icon={ShoppingCart}
+                    label="Loaf of Bread"
+                    value={f.loafOfBread}
+                  />
+                  <DataRow
+                    icon={ShoppingCart}
+                    label="Gallon of Milk"
+                    value={f.gallonOfMilk}
+                  />
+                  <DataRow
+                    icon={ShoppingCart}
+                    label="Carton of Eggs"
+                    value={f.cartonOfEggs}
+                  />
+                  <DataRow
+                    icon={ShoppingCart}
+                    label="Bunch of Bananas"
+                    value={f.bunchOfBananas}
+                  />
+                  <DataRow
+                    icon={ShoppingCart}
+                    label="Hamburger"
+                    value={f.hamburger}
+                  />
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Healthcare */}
+            {hc && (
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Stethoscope className="w-5 h-5 text-primary" />
+                    Healthcare
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <DataRow
+                    icon={Stethoscope}
+                    label="Doctor's Visit"
+                    value={hc.doctorsVisit}
+                  />
+                  <DataRow
+                    icon={Stethoscope}
+                    label="Dentist Visit"
+                    value={hc.dentistVisit}
+                  />
+                  <DataRow
+                    icon={Eye}
+                    label="Optometrist Visit"
+                    value={hc.optometristVisit}
+                  />
+                  <DataRow icon={Pill} label="Rx Drug" value={hc.rxDrug} />
+                  <DataRow
+                    icon={PawPrint}
+                    label="Veterinary Visit"
+                    value={hc.veterinaryVisit}
+                  />
+                </CardContent>
+              </Card>
             )}
           </div>
-        )}
 
-        {/* Data Sections */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Housing */}
-          {h && (
+          {/* State Context */}
+          {state && (
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="flex items-center gap-2 text-lg">
-                  <Home className="w-5 h-5 text-primary" />
-                  Housing &amp; Utilities
-                </CardTitle>
-                {cc?.Housing && (
-                  <div className="mt-1">{pctBadge(cc.Housing)}</div>
-                )}
-              </CardHeader>
-              <CardContent>
-                <DataRow
-                  icon={Building2}
-                  label="Median Home Price"
-                  value={h.medianHomePrice}
-                />
-                <DataRow
-                  icon={DollarSign}
-                  label="Median Rent"
-                  value={h.medianRent}
-                />
-                <DataRow icon={Zap} label="Energy Bill" value={h.energyBill} />
-                <DataRow icon={Phone} label="Phone Bill" value={h.phoneBill} />
-                <DataRow icon={Fuel} label="Gas (per gallon)" value={h.gas} />
+              <CardContent className="p-6">
+                <h2 className="text-lg font-bold mb-3">
+                  {city.name} in the Context of {state.name}
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                  <div>
+                    <span className="text-muted-foreground block">
+                      State Avg Cost Index
+                    </span>
+                    <span className="font-bold text-lg">
+                      {state.avgCostIndex?.toFixed(1) ?? "N/A"}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block">
+                      State Avg Rent
+                    </span>
+                    <span className="font-bold text-lg">
+                      ${state.avgMedianRent?.toLocaleString() ?? "N/A"}/mo
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block">
+                      State Income Tax
+                    </span>
+                    <span className="font-bold text-lg">
+                      {(state.avgTaxRate ?? 0) === 0 ? (
+                        <span className="text-green-600 dark:text-green-400">
+                          None
+                        </span>
+                      ) : (
+                        `${state.avgTaxRate}%`
+                      )}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block">
+                      Cities in State
+                    </span>
+                    <span className="font-bold text-lg">
+                      {state.totalCities}
+                    </span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           )}
 
-          {/* Food & Grocery */}
-          {f && (
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="flex items-center gap-2 text-lg">
-                  <ShoppingCart className="w-5 h-5 text-primary" />
-                  Food &amp; Grocery
-                </CardTitle>
-                {cc?.Groceries && (
-                  <div className="mt-1">{pctBadge(cc.Groceries)}</div>
-                )}
-              </CardHeader>
-              <CardContent>
-                <DataRow
-                  icon={ShoppingCart}
-                  label="Loaf of Bread"
-                  value={f.loafOfBread}
-                />
-                <DataRow
-                  icon={ShoppingCart}
-                  label="Gallon of Milk"
-                  value={f.gallonOfMilk}
-                />
-                <DataRow
-                  icon={ShoppingCart}
-                  label="Carton of Eggs"
-                  value={f.cartonOfEggs}
-                />
-                <DataRow
-                  icon={ShoppingCart}
-                  label="Bunch of Bananas"
-                  value={f.bunchOfBananas}
-                />
-                <DataRow
-                  icon={ShoppingCart}
-                  label="Hamburger"
-                  value={f.hamburger}
-                />
-              </CardContent>
-            </Card>
-          )}
-
-          {/* Healthcare */}
-          {hc && (
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="flex items-center gap-2 text-lg">
-                  <Stethoscope className="w-5 h-5 text-primary" />
-                  Healthcare
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <DataRow
-                  icon={Stethoscope}
-                  label="Doctor's Visit"
-                  value={hc.doctorsVisit}
-                />
-                <DataRow
-                  icon={Stethoscope}
-                  label="Dentist Visit"
-                  value={hc.dentistVisit}
-                />
-                <DataRow
-                  icon={Eye}
-                  label="Optometrist Visit"
-                  value={hc.optometristVisit}
-                />
-                <DataRow icon={Pill} label="Rx Drug" value={hc.rxDrug} />
-                <DataRow
-                  icon={PawPrint}
-                  label="Veterinary Visit"
-                  value={hc.veterinaryVisit}
-                />
-              </CardContent>
-            </Card>
-          )}
-        </div>
-
-        {/* State Context */}
-        {state && (
-          <Card>
-            <CardContent className="p-6">
-              <h2 className="text-lg font-bold mb-3">
-                {city.name} in the Context of {state.name}
+          {/* Nearby Cities */}
+          {nearbyCities.length > 0 && (
+            <section>
+              <h2 className="text-xl font-bold mb-4">
+                Other Cities in {city.stateName}
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                <div>
-                  <span className="text-muted-foreground block">
-                    State Avg Cost Index
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                {nearbyCities.map((nc) => (
+                  <Link key={nc.slug} href={`/states/${slug}/${nc.slug}`}>
+                    <Card className="hover-elevate cursor-pointer">
+                      <CardContent className="p-3">
+                        <div className="font-medium text-sm">{nc.name}</div>
+                        {nc.overallVsNationalAvg && (
+                          <div className="mt-1">
+                            {pctBadge(nc.overallVsNationalAvg)}
+                          </div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-3">
+                <Link href={`/states/${slug}`}>
+                  <span className="text-sm text-primary hover:underline">
+                    View all {state?.totalCities ?? ""} cities in{" "}
+                    {city.stateName} →
                   </span>
-                  <span className="font-bold text-lg">
-                    {state.avgCostIndex?.toFixed(1) ?? "N/A"}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-muted-foreground block">
-                    State Avg Rent
-                  </span>
-                  <span className="font-bold text-lg">
-                    ${state.avgMedianRent?.toLocaleString() ?? "N/A"}/mo
-                  </span>
-                </div>
-                <div>
-                  <span className="text-muted-foreground block">
-                    State Income Tax
-                  </span>
-                  <span className="font-bold text-lg">
-                    {(state.avgTaxRate ?? 0) === 0 ? (
-                      <span className="text-green-600 dark:text-green-400">
-                        None
-                      </span>
-                    ) : (
-                      `${state.avgTaxRate}%`
-                    )}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-muted-foreground block">
-                    Cities in State
-                  </span>
-                  <span className="font-bold text-lg">{state.totalCities}</span>
-                </div>
+                </Link>
+              </div>
+            </section>
+          )}
+
+          {/* Content */}
+          <Card>
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold mb-4">
+                About Living in {city.name}, {city.stateName}
+              </h2>
+              <div className="prose prose-sm text-muted-foreground max-w-none space-y-3">
+                <p>
+                  {city.name} is located in {city.stateName} and has an overall
+                  cost of living that is{" "}
+                  {overall
+                    ? `${overall} compared to the national average`
+                    : "close to the national average"}
+                  . Understanding the full picture of living expenses — from
+                  housing and rent to grocery bills and healthcare — is
+                  essential when considering a move to {city.name}.
+                </p>
+                {h?.medianRent && (
+                  <p>
+                    <strong>Housing:</strong> Median rent in {city.name} is{" "}
+                    {h.medianRent}
+                    {h.medianHomePrice
+                      ? `, and the median home price is ${h.medianHomePrice}`
+                      : ""}
+                    .{" "}
+                    {cc?.Housing
+                      ? `Housing costs are ${cc.Housing} compared to the national average, which significantly impacts monthly budgets.`
+                      : ""}
+                  </p>
+                )}
+                {f && (
+                  <p>
+                    <strong>Groceries:</strong> Daily essentials like bread (
+                    {f.loafOfBread}), milk ({f.gallonOfMilk}), and eggs (
+                    {f.cartonOfEggs}) reflect the local grocery landscape.{" "}
+                    {cc?.Groceries
+                      ? `Overall grocery costs are ${cc.Groceries} vs the national average.`
+                      : ""}
+                  </p>
+                )}
+                {hc && (
+                  <p>
+                    <strong>Healthcare:</strong> Medical costs include doctor
+                    visits ({hc.doctorsVisit}), dentist visits (
+                    {hc.dentistVisit}
+                    ), and prescription drugs ({hc.rxDrug}). These costs should
+                    be factored into your monthly budget when planning a move.
+                  </p>
+                )}
+                <p>
+                  {(state?.avgTaxRate ?? 0) === 0
+                    ? `${city.stateName} has no state income tax, which means residents of ${city.name} keep more of their earnings. This is especially beneficial for high-income earners and retirees.`
+                    : `${city.stateName} has a state income tax rate of ${state?.avgTaxRate ?? "N/A"}%, which affects take-home pay for ${city.name} residents.`}
+                </p>
               </div>
             </CardContent>
           </Card>
-        )}
 
-        {/* Nearby Cities */}
-        {nearbyCities.length > 0 && (
+          {/* Explore More */}
           <section>
-            <h2 className="text-xl font-bold mb-4">
-              Other Cities in {city.stateName}
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-              {nearbyCities.map((nc) => (
-                <Link key={nc.slug} href={`/states/${slug}/${nc.slug}`}>
-                  <Card className="hover-elevate cursor-pointer">
-                    <CardContent className="p-3">
-                      <div className="font-medium text-sm">{nc.name}</div>
-                      {nc.overallVsNationalAvg && (
-                        <div className="mt-1">
-                          {pctBadge(nc.overallVsNationalAvg)}
-                        </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-3">
+            <h2 className="text-xl font-bold mb-4">Explore More</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <Link href="/salary-calculator">
+                <Card className="hover-elevate cursor-pointer h-full">
+                  <CardContent className="p-5">
+                    <DollarSign className="w-5 h-5 text-primary mb-2" />
+                    <h3 className="font-semibold text-sm">Salary Calculator</h3>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Calculate what salary you need when moving to or from{" "}
+                      {city.name}.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/cheapest-cities">
+                <Card className="hover-elevate cursor-pointer h-full">
+                  <CardContent className="p-5">
+                    <TrendingDown className="w-5 h-5 text-primary mb-2" />
+                    <h3 className="font-semibold text-sm">
+                      Cheapest US Cities
+                    </h3>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      See the most affordable cities in the US ranked by cost
+                      index.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
               <Link href={`/states/${slug}`}>
-                <span className="text-sm text-primary hover:underline">
-                  View all {state?.totalCities ?? ""} cities in {city.stateName}{" "}
-                  →
-                </span>
+                <Card className="hover-elevate cursor-pointer h-full">
+                  <CardContent className="p-5">
+                    <MapPin className="w-5 h-5 text-primary mb-2" />
+                    <h3 className="font-semibold text-sm">
+                      All {city.stateName} Cities
+                    </h3>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Compare {city.name} with all {state?.totalCities ?? ""}{" "}
+                      cities in {city.stateName}.
+                    </p>
+                  </CardContent>
+                </Card>
               </Link>
             </div>
           </section>
-        )}
 
-        {/* Content */}
-        <Card>
-          <CardContent className="p-8">
-            <h2 className="text-2xl font-bold mb-4">
-              About Living in {city.name}, {city.stateName}
-            </h2>
-            <div className="prose prose-sm text-muted-foreground max-w-none space-y-3">
-              <p>
-                {city.name} is located in {city.stateName} and has an overall
-                cost of living that is{" "}
-                {overall
-                  ? `${overall} compared to the national average`
-                  : "close to the national average"}
-                . Understanding the full picture of living expenses — from
-                housing and rent to grocery bills and healthcare — is essential
-                when considering a move to {city.name}.
-              </p>
-              {h?.medianRent && (
-                <p>
-                  <strong>Housing:</strong> Median rent in {city.name} is{" "}
-                  {h.medianRent}
-                  {h.medianHomePrice
-                    ? `, and the median home price is ${h.medianHomePrice}`
-                    : ""}
-                  .{" "}
-                  {cc?.Housing
-                    ? `Housing costs are ${cc.Housing} compared to the national average, which significantly impacts monthly budgets.`
-                    : ""}
-                </p>
-              )}
-              {f && (
-                <p>
-                  <strong>Groceries:</strong> Daily essentials like bread (
-                  {f.loafOfBread}), milk ({f.gallonOfMilk}), and eggs (
-                  {f.cartonOfEggs}) reflect the local grocery landscape.{" "}
-                  {cc?.Groceries
-                    ? `Overall grocery costs are ${cc.Groceries} vs the national average.`
-                    : ""}
-                </p>
-              )}
-              {hc && (
-                <p>
-                  <strong>Healthcare:</strong> Medical costs include doctor
-                  visits ({hc.doctorsVisit}), dentist visits ({hc.dentistVisit}
-                  ), and prescription drugs ({hc.rxDrug}). These costs should be
-                  factored into your monthly budget when planning a move.
-                </p>
-              )}
-              <p>
-                {(state?.avgTaxRate ?? 0) === 0
-                  ? `${city.stateName} has no state income tax, which means residents of ${city.name} keep more of their earnings. This is especially beneficial for high-income earners and retirees.`
-                  : `${city.stateName} has a state income tax rate of ${state?.avgTaxRate ?? "N/A"}%, which affects take-home pay for ${city.name} residents.`}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* FAQ */}
-        <FAQSection
-          title={`${city.name}, ${city.stateName} Cost of Living FAQ`}
-          subtitle={`Common questions about living costs in ${city.name}.`}
-          items={faqItems}
-        />
+          {/* FAQ */}
+          <FAQSection
+            title={`${city.name}, ${city.stateName} Cost of Living FAQ`}
+            subtitle={`Common questions about living costs in ${city.name}.`}
+            items={faqItems}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -22,12 +22,23 @@ const compareLinks = [
   { slugA: "chicago-il", slugB: "dallas-tx", label: "Chicago vs Dallas" },
 ];
 
+const popularStates = [
+  { slug: "california", name: "California" },
+  { slug: "texas", name: "Texas" },
+  { slug: "florida", name: "Florida" },
+  { slug: "new-york", name: "New York" },
+  { slug: "washington", name: "Washington" },
+  { slug: "colorado", name: "Colorado" },
+  { slug: "arizona", name: "Arizona" },
+  { slug: "north-carolina", name: "North Carolina" },
+];
+
 export function Footer() {
   return (
     <footer className="bg-card border-t border-card-border mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="col-span-2 md:col-span-1">
             <Link href="/">
               <div className="flex items-center gap-2 mb-4 cursor-pointer">
                 <Image
@@ -69,6 +80,21 @@ export function Footer() {
                   <Link href={`/compare/${link.slugA}/vs/${link.slugB}`}>
                     <span className="text-sm text-muted-foreground cursor-pointer hover-elevate rounded-sm">
                       {link.label}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-sm mb-3">Popular States</h4>
+            <ul className="space-y-2">
+              {popularStates.map((st) => (
+                <li key={st.slug}>
+                  <Link href={`/states/${st.slug}`}>
+                    <span className="text-sm text-muted-foreground cursor-pointer hover-elevate rounded-sm">
+                      {st.name}
                     </span>
                   </Link>
                 </li>

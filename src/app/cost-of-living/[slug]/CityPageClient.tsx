@@ -565,6 +565,55 @@ export default function CityPageClient({
         </section>
       )}
 
+      {/* Explore More – Internal Linking */}
+      <section className="mt-8">
+        <h2 className="text-xl font-bold mb-4">Explore More</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Link href={`/states/${city.stateCode.toLowerCase()}`}>
+            <Card className="cursor-pointer hover-elevate h-full">
+              <CardContent className="p-5">
+                <MapPin className="w-5 h-5 text-primary mb-2" />
+                <h3 className="font-semibold text-sm mb-1">
+                  All Cities in {city.stateCode}
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Explore cost of living data for every city in {city.stateCode}
+                  . Compare rent, housing, and expenses statewide.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+          <Link href="/salary-calculator">
+            <Card className="cursor-pointer hover-elevate h-full">
+              <CardContent className="p-5">
+                <DollarSign className="w-5 h-5 text-primary mb-2" />
+                <h3 className="font-semibold text-sm mb-1">
+                  Salary Calculator
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Calculate what salary you need in any city to maintain your
+                  standard of living. Compare purchasing power across cities.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+          <Link href="/cheapest-cities">
+            <Card className="cursor-pointer hover-elevate h-full">
+              <CardContent className="p-5">
+                <TrendingUp className="w-5 h-5 text-primary mb-2" />
+                <h3 className="font-semibold text-sm mb-1">
+                  Cheapest Cities in the US
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  See how {city.name} ranks among the most affordable US cities.
+                  Sort by rent, cost index, and more.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="mt-8">
         <h2 className="text-xl font-bold mb-4">Frequently Asked Questions</h2>

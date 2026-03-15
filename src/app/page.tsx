@@ -165,7 +165,7 @@ export default async function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="max-w-3xl">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              Free &bull; Updated 2025 &bull; 47 US Cities
+              Free &bull; Updated 2026 &bull; 47 US Cities
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Cost of Living Comparison

@@ -253,7 +253,7 @@ export default function CityPageClient({
               </h1>
               <p className="text-muted-foreground">
                 {city.state} · Population: {formatNumber(city.population)} ·
-                Updated 2025
+                Updated 2026
               </p>
             </div>
           </div>

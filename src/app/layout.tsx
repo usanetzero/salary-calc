@@ -17,7 +17,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: {
     default:
-      "CostWise – Cost of Living Comparison Calculator for US Cities (2025)",
+      "CostWise – Cost of Living Comparison Calculator for US Cities (2026)",
     template: "%s | CostWise",
   },
   description:
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "compare salaries between cities",
     "cheapest cities to live in US",
     "cheapest cities to live in America",
-    "most affordable cities USA 2025",
+    "most affordable cities USA 2026",
     "affordable cities USA",
     "rent comparison by city",
     "average cost of living in arizona",

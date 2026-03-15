@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title:
-    "Salary Calculator – Compare Cost of Living & Wages Between US Cities (2025)",
+    "Salary Calculator – Compare Cost of Living & Wages Between US Cities (2026)",
   description:
     "Calculate your salary equivalent when moving between US cities. Compare wages vs cost of living for Arizona, Las Vegas, New York, Bay Area, and 47+ metros. Adjusts for housing costs, state income taxes, groceries, utilities, and purchasing power.",
   keywords: [

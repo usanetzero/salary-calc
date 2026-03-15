@@ -23,7 +23,7 @@ export async function generateMetadata({
   const stateCode = slug.split("-").pop()?.toUpperCase() || "";
 
   return {
-    title: `Cost of Living in ${cityName}, ${stateCode} (2025) – Rent, Income & Housing Data`,
+    title: `Cost of Living in ${cityName}, ${stateCode} (2026) – Rent, Income & Housing Data`,
     description: `Everything about the cost of living in ${cityName}, ${stateCode}. Compare housing costs, median rent, groceries, utilities, healthcare, and transportation. See salary equivalents, affordability scores, and state tax rates. Data from Census, BEA, HUD, and BLS.`,
     keywords: [
       `cost of living in ${cityName.toLowerCase()}`,

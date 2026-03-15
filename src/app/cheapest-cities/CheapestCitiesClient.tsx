@@ -135,7 +135,7 @@ export default function CheapestCitiesClient({
       <div className="mb-8">
         <div className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-2">
           <TrendingDown className="w-4 h-4" />
-          Affordability Rankings — 2025
+          Affordability Rankings — 2026
         </div>
         <h1
           className="text-3xl md:text-4xl font-bold mb-3"
@@ -442,7 +442,7 @@ export default function CheapestCitiesClient({
         subtitle="Common questions about finding the cheapest places to live in America."
         items={[
           {
-            question: "What are the cheapest cities to live in the US in 2025?",
+            question: "What are the cheapest cities to live in the US in 2026?",
             answer:
               "Based on the Bureau of Economic Analysis Regional Price Parities, the cheapest major US cities include Oklahoma City (index ~88), Memphis (index ~87), Wichita (index ~87), El Paso (index ~88), and Pittsburgh (index ~91). These cities offer housing costs 25–40% below the national average while still providing strong job markets.",
           },

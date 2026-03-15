@@ -49,7 +49,7 @@ export async function generateMetadata({
     .join(" ");
 
   return {
-    title: `${nameA} vs ${nameB} – Cost of Living Comparison (2025)`,
+    title: `${nameA} vs ${nameB} – Cost of Living Comparison (2026)`,
     description: `Compare cost of living between ${nameA} and ${nameB}. Side-by-side comparison of housing costs, rent, groceries, utilities, transportation, healthcare, state taxes, and salary equivalents. Find out which city is cheaper to live in.`,
     keywords: [
       `${nameA.toLowerCase()} vs ${nameB.toLowerCase()} cost of living`,
